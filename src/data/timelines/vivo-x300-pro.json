@@ -1,0 +1,457 @@
+{
+  "model": "Vivo X300 Pro",
+  "overview": "The latest innovation from Vivo, pushing the boundaries of telephoto macro photography and sleek aesthetics.",
+  "audio": "/audio/vivo-x300-pro.mp3",
+  "timeline": [
+    {
+      "type": "word",
+      "text": "The",
+      "start": 0,
+      "end": 0.42,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Vivo",
+      "start": 0.42,
+      "end": 0.88,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "X300",
+      "start": 0.88,
+      "end": 1.34,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Pro",
+      "start": 1.34,
+      "end": 1.76,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "stands",
+      "start": 1.76,
+      "end": 2.26,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "out",
+      "start": 2.26,
+      "end": 2.68,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "with",
+      "start": 2.68,
+      "end": 3.14,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "its",
+      "start": 3.14,
+      "end": 3.56,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "advanced",
+      "start": 3.56,
+      "end": 4.06,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "telephoto",
+      "start": 4.06,
+      "end": 4.56,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 4.56,
+      "end": 4.98,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "macro",
+      "start": 4.98,
+      "end": 5.48,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "photography",
+      "start": 5.48,
+      "end": 5.98,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "capabilities",
+      "start": 5.98,
+      "end": 6.48,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "Its",
+      "start": 6.78,
+      "end": 7.2,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "AMOLED",
+      "start": 7.2,
+      "end": 7.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "display",
+      "start": 7.7,
+      "end": 8.2,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "offers",
+      "start": 8.2,
+      "end": 8.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "smooth",
+      "start": 8.7,
+      "end": 9.2,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "visuals",
+      "start": 9.2,
+      "end": 9.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "with",
+      "start": 9.7,
+      "end": 10.16,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "eye-care",
+      "start": 10.16,
+      "end": 10.66,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "technology",
+      "start": 10.66,
+      "end": 11.16,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "for",
+      "start": 11.16,
+      "end": 11.58,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "long",
+      "start": 11.58,
+      "end": 12.04,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "viewing",
+      "start": 12.04,
+      "end": 12.54,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "sessions",
+      "start": 12.54,
+      "end": 13.04,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "The",
+      "start": 13.34,
+      "end": 13.76,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "camera",
+      "start": 13.76,
+      "end": 14.26,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "system",
+      "start": 14.26,
+      "end": 14.76,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "excels",
+      "start": 14.76,
+      "end": 15.26,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "at",
+      "start": 15.26,
+      "end": 15.64,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "zoom",
+      "start": 15.64,
+      "end": 16.1,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 16.1,
+      "end": 16.52,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "close-up",
+      "start": 16.52,
+      "end": 17.02,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "shots",
+      "start": 17.02,
+      "end": 17.52,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "making",
+      "start": 17.52,
+      "end": 18.02,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "it",
+      "start": 18.02,
+      "end": 18.4,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "ideal",
+      "start": 18.4,
+      "end": 18.9,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "for",
+      "start": 18.9,
+      "end": 19.32,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "creative",
+      "start": 19.32,
+      "end": 19.82,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "photography",
+      "start": 19.82,
+      "end": 20.32,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "With",
+      "start": 20.62,
+      "end": 21.08,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "a",
+      "start": 21.08,
+      "end": 21.42,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "long-lasting",
+      "start": 21.42,
+      "end": 21.92,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "battery",
+      "start": 21.92,
+      "end": 22.42,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 22.42,
+      "end": 22.84,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "premium",
+      "start": 22.84,
+      "end": 23.34,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "design",
+      "start": 23.34,
+      "end": 23.84,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "the",
+      "start": 23.84,
+      "end": 24.26,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Vivo",
+      "start": 24.26,
+      "end": 24.72,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "X300",
+      "start": 24.72,
+      "end": 25.18,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Pro",
+      "start": 25.18,
+      "end": 25.6,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "balances",
+      "start": 25.6,
+      "end": 26.1,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "style",
+      "start": 26.1,
+      "end": 26.6,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "camera",
+      "start": 26.6,
+      "end": 27.1,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "innovation",
+      "start": 27.1,
+      "end": 27.6,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 27.6,
+      "end": 28.02,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "everyday",
+      "start": 28.02,
+      "end": 28.52,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "performance",
+      "start": 28.52,
+      "end": 29.02,
+      "punctuation": "."
+    }
+  ],
+  "totalDuration": 29.02,
+  "images": {
+    "img1": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/..."
+  },
+  "specs": [
+    {
+      "label": "Display",
+      "value": "6.78-inch AMOLED"
+    },
+    {
+      "label": "Camera",
+      "value": "200MP APO Telephoto"
+    },
+    {
+      "label": "Battery",
+      "value": "6510mAh"
+    },
+    {
+      "label": "RAM",
+      "value": "16GB"
+    },
+    {
+      "label": "Storage",
+      "value": "512GB"
+    }
+  ],
+  "metadata": {
+    "wordCount": 60,
+    "generatedAt": "2025-12-16T04:43:55.389Z"
+  }
+}

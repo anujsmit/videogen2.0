@@ -1,4 +1,3 @@
 import { registerRoot } from "remotion";
-import { RemotionRoot } from "./Root";
-
-registerRoot(RemotionRoot);
+import { Root } from "./Root"; // Using named import { Root }
+registerRoot(Root);

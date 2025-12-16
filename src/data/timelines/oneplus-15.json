@@ -1,0 +1,562 @@
+{
+  "model": "OnePlus 15",
+  "overview": "A performance-first flagship known for the 'Battery King' title in 2025, featuring industry-leading charging speeds.",
+  "audio": "/audio/oneplus-15.mp3",
+  "timeline": [
+    {
+      "type": "word",
+      "text": "The",
+      "start": 0,
+      "end": 0.42,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "OnePlus",
+      "start": 0.42,
+      "end": 0.92,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "15",
+      "start": 0.92,
+      "end": 1.3,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "focuses",
+      "start": 1.3,
+      "end": 1.8,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "on",
+      "start": 1.8,
+      "end": 2.18,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "raw",
+      "start": 2.18,
+      "end": 2.6,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "performance",
+      "start": 2.6,
+      "end": 3.1,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 3.1,
+      "end": 3.52,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "battery",
+      "start": 3.52,
+      "end": 4.02,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "life",
+      "start": 4.02,
+      "end": 4.48,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "making",
+      "start": 4.48,
+      "end": 4.98,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "it",
+      "start": 4.98,
+      "end": 5.36,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "one",
+      "start": 5.36,
+      "end": 5.78,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "of",
+      "start": 5.78,
+      "end": 6.16,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "the",
+      "start": 6.16,
+      "end": 6.58,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "fastest",
+      "start": 6.58,
+      "end": 7.08,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "phones",
+      "start": 7.08,
+      "end": 7.58,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "of",
+      "start": 7.58,
+      "end": 7.96,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "2025",
+      "start": 7.96,
+      "end": 8.42,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "Its",
+      "start": 8.72,
+      "end": 9.14,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "large",
+      "start": 9.14,
+      "end": 9.64,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "AMOLED",
+      "start": 9.64,
+      "end": 10.14,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "display",
+      "start": 10.14,
+      "end": 10.64,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "with",
+      "start": 10.64,
+      "end": 11.1,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "a",
+      "start": 11.1,
+      "end": 11.44,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "high",
+      "start": 11.44,
+      "end": 11.9,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "refresh",
+      "start": 11.9,
+      "end": 12.4,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "rate",
+      "start": 12.4,
+      "end": 12.86,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "feels",
+      "start": 12.86,
+      "end": 13.36,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "incredibly",
+      "start": 13.36,
+      "end": 13.86,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "smooth",
+      "start": 13.86,
+      "end": 14.36,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "for",
+      "start": 14.36,
+      "end": 14.78,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "gaming",
+      "start": 14.78,
+      "end": 15.28,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 15.28,
+      "end": 15.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "daily",
+      "start": 15.7,
+      "end": 16.2,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "use",
+      "start": 16.2,
+      "end": 16.62,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "The",
+      "start": 16.92,
+      "end": 17.34,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "massive",
+      "start": 17.34,
+      "end": 17.84,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "battery",
+      "start": 17.84,
+      "end": 18.34,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "easily",
+      "start": 18.34,
+      "end": 18.84,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "lasts",
+      "start": 18.84,
+      "end": 19.34,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "more",
+      "start": 19.34,
+      "end": 19.8,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "than",
+      "start": 19.8,
+      "end": 20.26,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "a",
+      "start": 20.26,
+      "end": 20.6,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "full",
+      "start": 20.6,
+      "end": 21.06,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "day",
+      "start": 21.06,
+      "end": 21.48,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 21.48,
+      "end": 21.9,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "charges",
+      "start": 21.9,
+      "end": 22.4,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "extremely",
+      "start": 22.4,
+      "end": 22.9,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "fast",
+      "start": 22.9,
+      "end": 23.36,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "Co-developed",
+      "start": 23.66,
+      "end": 24.16,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "cameras",
+      "start": 24.16,
+      "end": 24.66,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "deliver",
+      "start": 24.66,
+      "end": 25.16,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "natural",
+      "start": 25.16,
+      "end": 25.66,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "colors",
+      "start": 25.66,
+      "end": 26.16,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "while",
+      "start": 26.16,
+      "end": 26.66,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "powerful",
+      "start": 26.66,
+      "end": 27.16,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "hardware",
+      "start": 27.16,
+      "end": 27.66,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "ensures",
+      "start": 27.66,
+      "end": 28.16,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "consistent",
+      "start": 28.16,
+      "end": 28.66,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "speed",
+      "start": 28.66,
+      "end": 29.16,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "If",
+      "start": 29.46,
+      "end": 29.84,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "battery",
+      "start": 29.84,
+      "end": 30.34,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "life",
+      "start": 30.34,
+      "end": 30.8,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 30.8,
+      "end": 31.22,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "performance",
+      "start": 31.22,
+      "end": 31.72,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "matter",
+      "start": 31.72,
+      "end": 32.22,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "most",
+      "start": 32.22,
+      "end": 32.68,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "the",
+      "start": 32.68,
+      "end": 33.1,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "OnePlus",
+      "start": 33.1,
+      "end": 33.6,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "15",
+      "start": 33.6,
+      "end": 33.98,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "is",
+      "start": 33.98,
+      "end": 34.36,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "a",
+      "start": 34.36,
+      "end": 34.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "standout",
+      "start": 34.7,
+      "end": 35.2,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "option",
+      "start": 35.2,
+      "end": 35.7,
+      "punctuation": "."
+    }
+  ],
+  "totalDuration": 35.7,
+  "images": {
+    "img1": "https://ezoix.com/wp-content/uploads/2025/12/OnePlus-15-Full-Specs-Price.jpg"
+  },
+  "specs": [
+    {
+      "label": "Display",
+      "value": "6.82-inch LTPO AMOLED"
+    },
+    {
+      "label": "Camera",
+      "value": "50MP Hasselblad System"
+    },
+    {
+      "label": "Battery",
+      "value": "7300mAh"
+    },
+    {
+      "label": "RAM",
+      "value": "16GB"
+    },
+    {
+      "label": "Storage",
+      "value": "512GB"
+    }
+  ],
+  "metadata": {
+    "wordCount": 75,
+    "generatedAt": "2025-12-16T04:43:55.388Z"
+  }
+}

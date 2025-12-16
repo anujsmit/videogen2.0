@@ -1,0 +1,691 @@
+{
+  "model": "Samsung Galaxy S25 Ultra",
+  "overview": "The definitive Android flagship of 2025, featuring a refined titanium build and the most advanced AI integration in the Galaxy series.",
+  "audio": "/audio/samsung-galaxy-s25-ultra.mp3",
+  "timeline": [
+    {
+      "type": "word",
+      "text": "The",
+      "start": 0,
+      "end": 0.42,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Samsung",
+      "start": 0.42,
+      "end": 0.92,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Galaxy",
+      "start": 0.92,
+      "end": 1.42,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "S25",
+      "start": 1.42,
+      "end": 1.84,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Ultra",
+      "start": 1.84,
+      "end": 2.34,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "is",
+      "start": 2.34,
+      "end": 2.72,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "built",
+      "start": 2.72,
+      "end": 3.22,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "for",
+      "start": 3.22,
+      "end": 3.64,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "users",
+      "start": 3.64,
+      "end": 4.14,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "who",
+      "start": 4.14,
+      "end": 4.56,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "want",
+      "start": 4.56,
+      "end": 5.02,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "the",
+      "start": 5.02,
+      "end": 5.44,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "absolute",
+      "start": 5.44,
+      "end": 5.94,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "best",
+      "start": 5.94,
+      "end": 6.4,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "from",
+      "start": 6.4,
+      "end": 6.86,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "an",
+      "start": 6.86,
+      "end": 7.24,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Android",
+      "start": 7.24,
+      "end": 7.74,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "flagship",
+      "start": 7.74,
+      "end": 8.24,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "Powered",
+      "start": 8.54,
+      "end": 9.04,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "by",
+      "start": 9.04,
+      "end": 9.42,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "a",
+      "start": 9.42,
+      "end": 9.76,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "next-generation",
+      "start": 9.76,
+      "end": 10.26,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "processor",
+      "start": 10.26,
+      "end": 10.76,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "it",
+      "start": 10.76,
+      "end": 11.14,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "delivers",
+      "start": 11.14,
+      "end": 11.64,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "smooth",
+      "start": 11.64,
+      "end": 12.14,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "performance",
+      "start": 12.14,
+      "end": 12.64,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "for",
+      "start": 12.64,
+      "end": 13.06,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "gaming",
+      "start": 13.06,
+      "end": 13.56,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "multitasking",
+      "start": 13.56,
+      "end": 14.06,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 14.06,
+      "end": 14.48,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "AI",
+      "start": 14.48,
+      "end": 14.86,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "features",
+      "start": 14.86,
+      "end": 15.36,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "The",
+      "start": 15.66,
+      "end": 16.08,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "large",
+      "start": 16.08,
+      "end": 16.58,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "6",
+      "start": 16.58,
+      "end": 16.92,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "9-inch",
+      "start": 17.22,
+      "end": 17.72,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Dynamic",
+      "start": 17.72,
+      "end": 18.22,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "AMOLED",
+      "start": 18.22,
+      "end": 18.72,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "display",
+      "start": 18.72,
+      "end": 19.22,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "offers",
+      "start": 19.22,
+      "end": 19.72,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "ultra-smooth",
+      "start": 19.72,
+      "end": 20.22,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "scrolling",
+      "start": 20.22,
+      "end": 20.72,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 20.72,
+      "end": 21.14,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "excellent",
+      "start": 21.14,
+      "end": 21.64,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "outdoor",
+      "start": 21.64,
+      "end": 22.14,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "visibility",
+      "start": 22.14,
+      "end": 22.64,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "Its",
+      "start": 22.94,
+      "end": 23.36,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "200-megapixel",
+      "start": 23.36,
+      "end": 23.86,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "camera",
+      "start": 23.86,
+      "end": 24.36,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "system",
+      "start": 24.36,
+      "end": 24.86,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "is",
+      "start": 24.86,
+      "end": 25.24,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "designed",
+      "start": 25.24,
+      "end": 25.74,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "for",
+      "start": 25.74,
+      "end": 26.16,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "professional-level",
+      "start": 26.16,
+      "end": 26.66,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "photography",
+      "start": 26.66,
+      "end": 27.16,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "capturing",
+      "start": 27.16,
+      "end": 27.66,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "sharp",
+      "start": 27.66,
+      "end": 28.16,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "detail",
+      "start": 28.16,
+      "end": 28.66,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 28.66,
+      "end": 29.08,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "powerful",
+      "start": 29.08,
+      "end": 29.58,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "zoom",
+      "start": 29.58,
+      "end": 30.04,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "With",
+      "start": 30.34,
+      "end": 30.8,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "a",
+      "start": 30.8,
+      "end": 31.14,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "reliable",
+      "start": 31.14,
+      "end": 31.64,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "5000mAh",
+      "start": 31.64,
+      "end": 32.14,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "battery",
+      "start": 32.14,
+      "end": 32.64,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "fast",
+      "start": 32.64,
+      "end": 33.1,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "charging",
+      "start": 33.1,
+      "end": 33.6,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 33.6,
+      "end": 34.02,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Samsung’s",
+      "start": 34.02,
+      "end": 34.52,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "refined",
+      "start": 34.52,
+      "end": 35.02,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "AI",
+      "start": 35.02,
+      "end": 35.4,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "experience",
+      "start": 35.4,
+      "end": 35.9,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "with",
+      "start": 35.9,
+      "end": 36.36,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "S-Pen",
+      "start": 36.36,
+      "end": 36.86,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "support",
+      "start": 36.86,
+      "end": 37.36,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "the",
+      "start": 37.36,
+      "end": 37.78,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Galaxy",
+      "start": 37.78,
+      "end": 38.28,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "S25",
+      "start": 38.28,
+      "end": 38.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Ultra",
+      "start": 38.7,
+      "end": 39.2,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "stands",
+      "start": 39.2,
+      "end": 39.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "out",
+      "start": 39.7,
+      "end": 40.12,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "as",
+      "start": 40.12,
+      "end": 40.5,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "one",
+      "start": 40.5,
+      "end": 40.92,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "of",
+      "start": 40.92,
+      "end": 41.3,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "the",
+      "start": 41.3,
+      "end": 41.72,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "most",
+      "start": 41.72,
+      "end": 42.18,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "complete",
+      "start": 42.18,
+      "end": 42.68,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "premium",
+      "start": 42.68,
+      "end": 43.18,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "smartphones",
+      "start": 43.18,
+      "end": 43.68,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "of",
+      "start": 43.68,
+      "end": 44.06,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "2025",
+      "start": 44.06,
+      "end": 44.52,
+      "punctuation": "."
+    }
+  ],
+  "totalDuration": 44.52,
+  "images": {
+    "img1": "https://media.gadgetbytenepal.com/2025/01/Samsung-Galaxy-S25-Ultra-Titanium-Grey.jpg"
+  },
+  "specs": [
+    {
+      "label": "Display",
+      "value": "6.9-inch Dynamic AMOLED 2X",
+      "description": "An expansive, ultra-bright screen with a 144Hz refresh rate and improved anti-reflective coating for outdoor visibility."
+    },
+    {
+      "label": "Camera",
+      "value": "200MP Quad Telephoto",
+      "description": "A professional-grade sensor capable of 8K video and incredible 100x Space Zoom with AI-driven stabilization."
+    },
+    {
+      "label": "Battery",
+      "value": "5000mAh",
+      "description": "Optimized for long-lasting performance with 65W super-fast wired charging support."
+    },
+    {
+      "label": "RAM",
+      "value": "16GB"
+    },
+    {
+      "label": "Storage",
+      "value": "512GB"
+    }
+  ],
+  "metadata": {
+    "wordCount": 93,
+    "generatedAt": "2025-12-16T04:43:55.381Z"
+  }
+}
