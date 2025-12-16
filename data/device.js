@@ -1,4 +1,5 @@
-export const devices = [
+module.exports = {
+  devices: [
     {
       "model": "Samsung Galaxy S25 Ultra",
       "overview": "The definitive Android flagship of 2025 with top level performance and camera quality.",
@@ -78,5 +79,5 @@ export const devices = [
         "img1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNDgvXOXXl7-mU7j-oX7cmALF6b9ocF4v4ew&s"
       }
     }
-
-];
+  ]
+};

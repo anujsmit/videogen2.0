@@ -7,1634 +7,824 @@
       "type": "word",
       "text": "The",
       "start": 0,
-      "end": 0.45,
-      "punctuation": ""
+      "end": 0.2465084745762712,
+      "punctuation": "",
+      "duration": 0.2465084745762712
     },
     {
       "type": "word",
       "text": "Xiaomi",
-      "start": 0.45,
-      "end": 0.95,
-      "punctuation": ""
+      "start": 0.2465084745762712,
+      "end": 0.7395254237288136,
+      "punctuation": "",
+      "duration": 0.4930169491525424
     },
     {
       "type": "word",
       "text": "15",
-      "start": 0.95,
-      "end": 1.45,
-      "punctuation": ""
+      "start": 0.7395254237288136,
+      "end": 0.9038644067796611,
+      "punctuation": "",
+      "duration": 0.16433898305084746
     },
     {
       "type": "word",
       "text": "Ultra",
-      "start": 1.45,
-      "end": 1.95,
-      "punctuation": ""
+      "start": 0.9038644067796611,
+      "end": 1.3147118644067797,
+      "punctuation": "",
+      "duration": 0.4108474576271186
     },
     {
       "type": "word",
       "text": "is",
-      "start": 1.95,
-      "end": 2.35,
-      "punctuation": ""
+      "start": 1.3147118644067797,
+      "end": 1.4790508474576272,
+      "punctuation": "",
+      "duration": 0.16433898305084746
     },
     {
       "type": "word",
       "text": "made",
-      "start": 2.35,
-      "end": 2.85,
-      "punctuation": ""
+      "start": 1.4790508474576272,
+      "end": 1.8077288135593221,
+      "punctuation": "",
+      "duration": 0.3286779661016949
     },
     {
       "type": "word",
       "text": "for",
-      "start": 2.85,
-      "end": 3.3,
-      "punctuation": ""
+      "start": 1.8077288135593221,
+      "end": 2.0542372881355933,
+      "punctuation": "",
+      "duration": 0.2465084745762712
     },
     {
       "type": "word",
       "text": "users",
-      "start": 3.3,
-      "end": 3.8,
-      "punctuation": ""
+      "start": 2.0542372881355933,
+      "end": 2.465084745762712,
+      "punctuation": "",
+      "duration": 0.4108474576271186
     },
     {
       "type": "word",
       "text": "who",
-      "start": 3.8,
-      "end": 4.25,
-      "punctuation": ""
+      "start": 2.465084745762712,
+      "end": 2.711593220338983,
+      "punctuation": "",
+      "duration": 0.2465084745762712
     },
     {
       "type": "word",
       "text": "love",
-      "start": 4.25,
-      "end": 4.75,
-      "punctuation": ""
+      "start": 2.711593220338983,
+      "end": 3.040271186440678,
+      "punctuation": "",
+      "duration": 0.3286779661016949
     },
     {
       "type": "word",
       "text": "photography",
-      "start": 4.75,
-      "end": 5.25,
-      "punctuation": "."
+      "start": 3.040271186440678,
+      "end": 3.9441355932203392,
+      "punctuation": ".",
+      "duration": 0.903864406779661
     },
     {
       "type": "word",
       "text": "The",
-      "start": 5.55,
-      "end": 6,
-      "punctuation": ""
+      "start": 4.848,
+      "end": 5.079157894736842,
+      "punctuation": "",
+      "duration": 0.2311578947368421
     },
     {
       "type": "word",
       "text": "main",
-      "start": 6,
-      "end": 6.5,
-      "punctuation": ""
+      "start": 5.079157894736842,
+      "end": 5.387368421052631,
+      "punctuation": "",
+      "duration": 0.30821052631578943
     },
     {
       "type": "word",
       "text": "camera",
-      "start": 6.5,
-      "end": 7,
-      "punctuation": ""
+      "start": 5.387368421052631,
+      "end": 5.849684210526315,
+      "punctuation": "",
+      "duration": 0.4623157894736842
     },
     {
       "type": "word",
       "text": "uses",
-      "start": 7,
-      "end": 7.5,
-      "punctuation": ""
+      "start": 5.849684210526315,
+      "end": 6.157894736842104,
+      "punctuation": "",
+      "duration": 0.30821052631578943
     },
     {
       "type": "word",
       "text": "a",
-      "start": 7.5,
-      "end": 7.85,
-      "punctuation": ""
+      "start": 6.157894736842104,
+      "end": 6.234947368421052,
+      "punctuation": "",
+      "duration": 0.07705263157894736
     },
     {
       "type": "word",
       "text": "large",
-      "start": 7.85,
-      "end": 8.35,
-      "punctuation": ""
+      "start": 6.234947368421052,
+      "end": 6.620210526315788,
+      "punctuation": "",
+      "duration": 0.3852631578947368
     },
     {
       "type": "word",
       "text": "sensor",
-      "start": 8.35,
-      "end": 8.85,
-      "punctuation": ""
+      "start": 6.620210526315788,
+      "end": 7.0825263157894724,
+      "punctuation": "",
+      "duration": 0.4623157894736842
     },
     {
       "type": "word",
       "text": "that",
-      "start": 8.85,
-      "end": 9.35,
-      "punctuation": ""
+      "start": 7.0825263157894724,
+      "end": 7.3907368421052615,
+      "punctuation": "",
+      "duration": 0.30821052631578943
     },
     {
       "type": "word",
       "text": "captures",
-      "start": 9.35,
-      "end": 9.85,
-      "punctuation": ""
+      "start": 7.3907368421052615,
+      "end": 8.00715789473684,
+      "punctuation": "",
+      "duration": 0.6164210526315789
     },
     {
       "type": "word",
       "text": "detailed",
-      "start": 9.85,
-      "end": 10.35,
-      "punctuation": ""
+      "start": 8.00715789473684,
+      "end": 8.623578947368419,
+      "punctuation": "",
+      "duration": 0.6164210526315789
     },
     {
       "type": "word",
       "text": "and",
-      "start": 10.35,
-      "end": 10.8,
-      "punctuation": ""
+      "start": 8.623578947368419,
+      "end": 8.854736842105261,
+      "punctuation": "",
+      "duration": 0.2311578947368421
     },
     {
       "type": "word",
       "text": "sharp",
-      "start": 10.8,
-      "end": 11.3,
-      "punctuation": ""
+      "start": 8.854736842105261,
+      "end": 9.239999999999998,
+      "punctuation": "",
+      "duration": 0.3852631578947368
     },
     {
       "type": "word",
       "text": "photos",
-      "start": 11.3,
-      "end": 11.8,
-      "punctuation": "."
+      "start": 9.239999999999998,
+      "end": 9.702315789473683,
+      "punctuation": ".",
+      "duration": 0.4623157894736842
     },
     {
       "type": "word",
       "text": "Low",
-      "start": 12.1,
-      "end": 12.55,
-      "punctuation": ""
+      "start": 10.704,
+      "end": 10.915764705882353,
+      "punctuation": "",
+      "duration": 0.21176470588235294
     },
     {
       "type": "word",
       "text": "light",
-      "start": 12.55,
-      "end": 13.05,
-      "punctuation": ""
+      "start": 10.915764705882353,
+      "end": 11.268705882352942,
+      "punctuation": "",
+      "duration": 0.35294117647058826
     },
     {
       "type": "word",
       "text": "performance",
-      "start": 13.05,
-      "end": 13.55,
-      "punctuation": ""
+      "start": 11.268705882352942,
+      "end": 12.045176470588236,
+      "punctuation": "",
+      "duration": 0.7764705882352941
     },
     {
       "type": "word",
       "text": "is",
-      "start": 13.55,
-      "end": 13.95,
-      "punctuation": ""
+      "start": 12.045176470588236,
+      "end": 12.186352941176471,
+      "punctuation": "",
+      "duration": 0.1411764705882353
     },
     {
       "type": "word",
       "text": "excellent",
-      "start": 13.95,
-      "end": 14.45,
-      "punctuation": ""
+      "start": 12.186352941176471,
+      "end": 12.82164705882353,
+      "punctuation": "",
+      "duration": 0.6352941176470588
     },
     {
       "type": "word",
       "text": "and",
-      "start": 14.45,
-      "end": 14.9,
-      "punctuation": ""
+      "start": 12.82164705882353,
+      "end": 13.033411764705882,
+      "punctuation": "",
+      "duration": 0.21176470588235294
     },
     {
       "type": "word",
       "text": "images",
-      "start": 14.9,
-      "end": 15.4,
-      "punctuation": ""
+      "start": 13.033411764705882,
+      "end": 13.456941176470588,
+      "punctuation": "",
+      "duration": 0.4235294117647059
     },
     {
       "type": "word",
       "text": "look",
-      "start": 15.4,
-      "end": 15.9,
-      "punctuation": ""
+      "start": 13.456941176470588,
+      "end": 13.73929411764706,
+      "punctuation": "",
+      "duration": 0.2823529411764706
     },
     {
       "type": "word",
       "text": "bright",
-      "start": 15.9,
-      "end": 16.4,
-      "punctuation": ""
+      "start": 13.73929411764706,
+      "end": 14.162823529411765,
+      "punctuation": "",
+      "duration": 0.4235294117647059
     },
     {
       "type": "word",
       "text": "and",
-      "start": 16.4,
-      "end": 16.85,
-      "punctuation": ""
+      "start": 14.162823529411765,
+      "end": 14.374588235294118,
+      "punctuation": "",
+      "duration": 0.21176470588235294
     },
     {
       "type": "word",
       "text": "clear",
-      "start": 16.85,
-      "end": 17.35,
-      "punctuation": "."
+      "start": 14.374588235294118,
+      "end": 14.727529411764706,
+      "punctuation": ".",
+      "duration": 0.35294117647058826
     },
     {
       "type": "word",
       "text": "Leica",
-      "start": 17.65,
-      "end": 18.15,
-      "punctuation": ""
+      "start": 15.504000000000001,
+      "end": 15.943024390243904,
+      "punctuation": "",
+      "duration": 0.43902439024390244
     },
     {
       "type": "word",
       "text": "tuning",
-      "start": 18.15,
-      "end": 18.65,
-      "punctuation": ""
+      "start": 15.943024390243904,
+      "end": 16.469853658536586,
+      "punctuation": "",
+      "duration": 0.526829268292683
     },
     {
       "type": "word",
       "text": "improves",
-      "start": 18.65,
-      "end": 19.15,
-      "punctuation": ""
+      "start": 16.469853658536586,
+      "end": 17.17229268292683,
+      "punctuation": "",
+      "duration": 0.702439024390244
     },
     {
       "type": "word",
       "text": "color",
-      "start": 19.15,
-      "end": 19.65,
-      "punctuation": ""
+      "start": 17.17229268292683,
+      "end": 17.61131707317073,
+      "punctuation": "",
+      "duration": 0.43902439024390244
     },
     {
       "type": "word",
       "text": "and",
-      "start": 19.65,
-      "end": 20.1,
-      "punctuation": ""
+      "start": 17.61131707317073,
+      "end": 17.87473170731707,
+      "punctuation": "",
+      "duration": 0.2634146341463415
     },
     {
       "type": "word",
       "text": "contrast",
-      "start": 20.1,
-      "end": 20.6,
-      "punctuation": "."
+      "start": 17.87473170731707,
+      "end": 18.577170731707316,
+      "punctuation": ".",
+      "duration": 0.702439024390244
     },
     {
       "type": "word",
       "text": "Zoom",
-      "start": 20.9,
-      "end": 21.4,
-      "punctuation": ""
+      "start": 19.104000000000003,
+      "end": 19.438829268292686,
+      "punctuation": "",
+      "duration": 0.33482926829268295
     },
     {
       "type": "word",
       "text": "performance",
-      "start": 21.4,
-      "end": 21.9,
-      "punctuation": ""
+      "start": 19.438829268292686,
+      "end": 20.359609756097566,
+      "punctuation": "",
+      "duration": 0.9207804878048781
     },
     {
       "type": "word",
       "text": "is",
-      "start": 21.9,
-      "end": 22.3,
-      "punctuation": ""
+      "start": 20.359609756097566,
+      "end": 20.527024390243906,
+      "punctuation": "",
+      "duration": 0.16741463414634147
     },
     {
       "type": "word",
       "text": "also",
-      "start": 22.3,
-      "end": 22.8,
-      "punctuation": ""
+      "start": 20.527024390243906,
+      "end": 20.86185365853659,
+      "punctuation": "",
+      "duration": 0.33482926829268295
     },
     {
       "type": "word",
       "text": "very",
-      "start": 22.8,
-      "end": 23.3,
-      "punctuation": ""
+      "start": 20.86185365853659,
+      "end": 21.196682926829272,
+      "punctuation": "",
+      "duration": 0.33482926829268295
     },
     {
       "type": "word",
       "text": "impressive",
-      "start": 23.3,
-      "end": 23.8,
-      "punctuation": "."
+      "start": 21.196682926829272,
+      "end": 22.03375609756098,
+      "punctuation": ".",
+      "duration": 0.8370731707317073
     },
     {
       "type": "word",
       "text": "The",
-      "start": 24.1,
-      "end": 24.55,
-      "punctuation": ""
+      "start": 22.536,
+      "end": 22.75491891891892,
+      "punctuation": "",
+      "duration": 0.21891891891891896
     },
     {
       "type": "word",
       "text": "display",
-      "start": 24.55,
-      "end": 25.05,
-      "punctuation": ""
+      "start": 22.75491891891892,
+      "end": 23.26572972972973,
+      "punctuation": "",
+      "duration": 0.5108108108108109
     },
     {
       "type": "word",
       "text": "is",
-      "start": 25.05,
-      "end": 25.45,
-      "punctuation": ""
+      "start": 23.26572972972973,
+      "end": 23.411675675675678,
+      "punctuation": "",
+      "duration": 0.14594594594594595
     },
     {
       "type": "word",
       "text": "bright",
-      "start": 25.45,
-      "end": 25.95,
-      "punctuation": ""
+      "start": 23.411675675675678,
+      "end": 23.849513513513514,
+      "punctuation": "",
+      "duration": 0.4378378378378379
     },
     {
       "type": "word",
       "text": "and",
-      "start": 25.95,
-      "end": 26.4,
-      "punctuation": ""
+      "start": 23.849513513513514,
+      "end": 24.068432432432434,
+      "punctuation": "",
+      "duration": 0.21891891891891896
     },
     {
       "type": "word",
       "text": "colorful",
-      "start": 26.4,
-      "end": 26.9,
-      "punctuation": ","
+      "start": 24.068432432432434,
+      "end": 24.652216216216218,
+      "punctuation": ",",
+      "duration": 0.5837837837837838
     },
     {
       "type": "word",
       "text": "making",
-      "start": 26.9,
-      "end": 27.4,
-      "punctuation": ""
+      "start": 24.652216216216218,
+      "end": 25.090054054054054,
+      "punctuation": "",
+      "duration": 0.4378378378378379
     },
     {
       "type": "word",
       "text": "photos",
-      "start": 27.4,
-      "end": 27.9,
-      "punctuation": ""
+      "start": 25.090054054054054,
+      "end": 25.52789189189189,
+      "punctuation": "",
+      "duration": 0.4378378378378379
     },
     {
       "type": "word",
       "text": "and",
-      "start": 27.9,
-      "end": 28.35,
-      "punctuation": ""
+      "start": 25.52789189189189,
+      "end": 25.74681081081081,
+      "punctuation": "",
+      "duration": 0.21891891891891896
     },
     {
       "type": "word",
       "text": "videos",
-      "start": 28.35,
-      "end": 28.85,
-      "punctuation": ""
+      "start": 25.74681081081081,
+      "end": 26.184648648648647,
+      "punctuation": "",
+      "duration": 0.4378378378378379
     },
     {
       "type": "word",
       "text": "look",
-      "start": 28.85,
-      "end": 29.35,
-      "punctuation": ""
+      "start": 26.184648648648647,
+      "end": 26.47654054054054,
+      "punctuation": "",
+      "duration": 0.2918918918918919
     },
     {
       "type": "word",
       "text": "amazing",
-      "start": 29.35,
-      "end": 29.85,
-      "punctuation": "."
+      "start": 26.47654054054054,
+      "end": 26.98735135135135,
+      "punctuation": ".",
+      "duration": 0.5108108108108109
     },
     {
       "type": "word",
       "text": "Performance",
-      "start": 30.15,
-      "end": 30.65,
-      "punctuation": ""
+      "start": 27.936,
+      "end": 28.7808,
+      "punctuation": "",
+      "duration": 0.8447999999999999
     },
     {
       "type": "word",
       "text": "is",
-      "start": 30.65,
-      "end": 31.05,
-      "punctuation": ""
+      "start": 28.7808,
+      "end": 28.9344,
+      "punctuation": "",
+      "duration": 0.1536
     },
     {
       "type": "word",
       "text": "strong",
-      "start": 31.05,
-      "end": 31.55,
-      "punctuation": ""
+      "start": 28.9344,
+      "end": 29.3952,
+      "punctuation": "",
+      "duration": 0.4608
     },
     {
       "type": "word",
       "text": "and",
-      "start": 31.55,
-      "end": 32,
-      "punctuation": ""
+      "start": 29.3952,
+      "end": 29.6256,
+      "punctuation": "",
+      "duration": 0.2304
     },
     {
       "type": "word",
       "text": "handles",
-      "start": 32,
-      "end": 32.5,
-      "punctuation": ""
+      "start": 29.6256,
+      "end": 30.1632,
+      "punctuation": "",
+      "duration": 0.5376
     },
     {
       "type": "word",
       "text": "photo",
-      "start": 32.5,
-      "end": 33,
-      "punctuation": ""
+      "start": 30.1632,
+      "end": 30.5472,
+      "punctuation": "",
+      "duration": 0.38399999999999995
     },
     {
       "type": "word",
       "text": "processing",
-      "start": 33,
-      "end": 33.5,
-      "punctuation": ""
+      "start": 30.5472,
+      "end": 31.3152,
+      "punctuation": "",
+      "duration": 0.7679999999999999
     },
     {
       "type": "word",
       "text": "smoothly",
-      "start": 33.5,
-      "end": 34,
-      "punctuation": "."
+      "start": 31.3152,
+      "end": 31.9296,
+      "punctuation": ".",
+      "duration": 0.6144
     },
     {
       "type": "word",
       "text": "Battery",
-      "start": 34.3,
-      "end": 34.8,
-      "punctuation": ""
+      "start": 32.544,
+      "end": 33.077999999999996,
+      "punctuation": "",
+      "duration": 0.534
     },
     {
       "type": "word",
       "text": "life",
-      "start": 34.8,
-      "end": 35.3,
-      "punctuation": ""
+      "start": 33.077999999999996,
+      "end": 33.38314285714285,
+      "punctuation": "",
+      "duration": 0.30514285714285716
     },
     {
       "type": "word",
       "text": "is",
-      "start": 35.3,
-      "end": 35.7,
-      "punctuation": ""
+      "start": 33.38314285714285,
+      "end": 33.53571428571428,
+      "punctuation": "",
+      "duration": 0.15257142857142858
     },
     {
       "type": "word",
       "text": "solid",
-      "start": 35.7,
-      "end": 36.2,
-      "punctuation": ""
+      "start": 33.53571428571428,
+      "end": 33.91714285714285,
+      "punctuation": "",
+      "duration": 0.38142857142857145
     },
     {
       "type": "word",
       "text": "and",
-      "start": 36.2,
-      "end": 36.65,
-      "punctuation": ""
+      "start": 33.91714285714285,
+      "end": 34.145999999999994,
+      "punctuation": "",
+      "duration": 0.22885714285714287
     },
     {
       "type": "word",
       "text": "fast",
-      "start": 36.65,
-      "end": 37.15,
-      "punctuation": ""
+      "start": 34.145999999999994,
+      "end": 34.45114285714285,
+      "punctuation": "",
+      "duration": 0.30514285714285716
     },
     {
       "type": "word",
       "text": "charging",
-      "start": 37.15,
-      "end": 37.65,
-      "punctuation": ""
+      "start": 34.45114285714285,
+      "end": 35.061428571428564,
+      "punctuation": "",
+      "duration": 0.6102857142857143
     },
     {
       "type": "word",
       "text": "helps",
-      "start": 37.65,
-      "end": 38.15,
-      "punctuation": ""
+      "start": 35.061428571428564,
+      "end": 35.442857142857136,
+      "punctuation": "",
+      "duration": 0.38142857142857145
     },
     {
       "type": "word",
       "text": "save",
-      "start": 38.15,
-      "end": 38.65,
-      "punctuation": ""
+      "start": 35.442857142857136,
+      "end": 35.74799999999999,
+      "punctuation": "",
+      "duration": 0.30514285714285716
     },
     {
       "type": "word",
       "text": "time",
-      "start": 38.65,
-      "end": 39.15,
-      "punctuation": "."
+      "start": 35.74799999999999,
+      "end": 36.053142857142845,
+      "punctuation": ".",
+      "duration": 0.30514285714285716
     },
     {
       "type": "word",
       "text": "The",
-      "start": 39.45,
-      "end": 39.9,
-      "punctuation": ""
+      "start": 36.815999999999995,
+      "end": 37.061538461538454,
+      "punctuation": "",
+      "duration": 0.24553846153846157
     },
     {
       "type": "word",
       "text": "phone",
-      "start": 39.9,
-      "end": 40.4,
-      "punctuation": ""
+      "start": 37.061538461538454,
+      "end": 37.47076923076922,
+      "punctuation": "",
+      "duration": 0.40923076923076923
     },
     {
       "type": "word",
       "text": "feels",
-      "start": 40.4,
-      "end": 40.9,
-      "punctuation": ""
+      "start": 37.47076923076922,
+      "end": 37.87999999999999,
+      "punctuation": "",
+      "duration": 0.40923076923076923
     },
     {
       "type": "word",
       "text": "premium",
-      "start": 40.9,
-      "end": 41.4,
-      "punctuation": ""
+      "start": 37.87999999999999,
+      "end": 38.452923076923064,
+      "punctuation": "",
+      "duration": 0.572923076923077
     },
     {
       "type": "word",
       "text": "and",
-      "start": 41.4,
-      "end": 41.85,
-      "punctuation": ""
+      "start": 38.452923076923064,
+      "end": 38.69846153846152,
+      "punctuation": "",
+      "duration": 0.24553846153846157
     },
     {
       "type": "word",
       "text": "well",
-      "start": 41.85,
-      "end": 42.35,
-      "punctuation": ""
+      "start": 38.69846153846152,
+      "end": 39.02584615384614,
+      "punctuation": "",
+      "duration": 0.3273846153846154
     },
     {
       "type": "word",
       "text": "built",
-      "start": 42.35,
-      "end": 42.85,
-      "punctuation": "."
+      "start": 39.02584615384614,
+      "end": 39.435076923076906,
+      "punctuation": ".",
+      "duration": 0.40923076923076923
     },
     {
       "type": "word",
       "text": "If",
-      "start": 43.15,
-      "end": 43.55,
-      "punctuation": ""
+      "start": 40.007999999999996,
+      "end": 40.16585567010309,
+      "punctuation": "",
+      "duration": 0.1578556701030928
     },
     {
       "type": "word",
       "text": "camera",
-      "start": 43.55,
-      "end": 44.05,
-      "punctuation": ""
+      "start": 40.16585567010309,
+      "end": 40.63942268041237,
+      "punctuation": "",
+      "duration": 0.47356701030927834
     },
     {
       "type": "word",
       "text": "quality",
-      "start": 44.05,
-      "end": 44.55,
-      "punctuation": ""
+      "start": 40.63942268041237,
+      "end": 41.1919175257732,
+      "punctuation": "",
+      "duration": 0.5524948453608247
     },
     {
       "type": "word",
       "text": "is",
-      "start": 44.55,
-      "end": 44.95,
-      "punctuation": ""
+      "start": 41.1919175257732,
+      "end": 41.349773195876296,
+      "punctuation": "",
+      "duration": 0.1578556701030928
     },
     {
       "type": "word",
       "text": "your",
-      "start": 44.95,
-      "end": 45.45,
-      "punctuation": ""
+      "start": 41.349773195876296,
+      "end": 41.66548453608248,
+      "punctuation": "",
+      "duration": 0.3157113402061856
     },
     {
       "type": "word",
       "text": "top",
-      "start": 45.45,
-      "end": 45.9,
-      "punctuation": ""
+      "start": 41.66548453608248,
+      "end": 41.90226804123712,
+      "punctuation": "",
+      "duration": 0.23678350515463917
     },
     {
       "type": "word",
       "text": "priority",
-      "start": 45.9,
-      "end": 46.4,
-      "punctuation": ","
+      "start": 41.90226804123712,
+      "end": 42.53369072164949,
+      "punctuation": ",",
+      "duration": 0.6314226804123712
     },
     {
       "type": "word",
       "text": "the",
-      "start": 46.4,
-      "end": 46.85,
-      "punctuation": ""
+      "start": 42.53369072164949,
+      "end": 42.77047422680413,
+      "punctuation": "",
+      "duration": 0.23678350515463917
     },
     {
       "type": "word",
       "text": "Xiaomi",
-      "start": 46.85,
-      "end": 47.35,
-      "punctuation": ""
+      "start": 42.77047422680413,
+      "end": 43.244041237113414,
+      "punctuation": "",
+      "duration": 0.47356701030927834
     },
     {
       "type": "word",
       "text": "15",
-      "start": 47.35,
-      "end": 47.85,
-      "punctuation": ""
+      "start": 43.244041237113414,
+      "end": 43.40189690721651,
+      "punctuation": "",
+      "duration": 0.1578556701030928
     },
     {
       "type": "word",
       "text": "Ultra",
-      "start": 47.85,
-      "end": 48.35,
-      "punctuation": ""
+      "start": 43.40189690721651,
+      "end": 43.79653608247424,
+      "punctuation": "",
+      "duration": 0.3946391752577319
     },
     {
       "type": "word",
       "text": "is",
-      "start": 48.35,
-      "end": 48.75,
-      "punctuation": ""
+      "start": 43.79653608247424,
+      "end": 43.95439175257734,
+      "punctuation": "",
+      "duration": 0.1578556701030928
     },
     {
       "type": "word",
       "text": "one",
-      "start": 48.75,
-      "end": 49.2,
-      "punctuation": ""
+      "start": 43.95439175257734,
+      "end": 44.19117525773198,
+      "punctuation": "",
+      "duration": 0.23678350515463917
     },
     {
       "type": "word",
       "text": "of",
-      "start": 49.2,
-      "end": 49.6,
-      "punctuation": ""
+      "start": 44.19117525773198,
+      "end": 44.349030927835074,
+      "punctuation": "",
+      "duration": 0.1578556701030928
     },
     {
       "type": "word",
       "text": "the",
-      "start": 49.6,
-      "end": 50.05,
-      "punctuation": ""
+      "start": 44.349030927835074,
+      "end": 44.585814432989714,
+      "punctuation": "",
+      "duration": 0.23678350515463917
     },
     {
       "type": "word",
       "text": "best",
-      "start": 50.05,
-      "end": 50.55,
-      "punctuation": ""
+      "start": 44.585814432989714,
+      "end": 44.9015257731959,
+      "punctuation": "",
+      "duration": 0.3157113402061856
     },
     {
       "type": "word",
       "text": "choices",
-      "start": 50.55,
-      "end": 51.05,
-      "punctuation": ""
+      "start": 44.9015257731959,
+      "end": 45.454020618556726,
+      "punctuation": "",
+      "duration": 0.5524948453608247
     },
     {
       "type": "word",
       "text": "available",
-      "start": 51.05,
-      "end": 51.55,
-      "punctuation": "."
+      "start": 45.454020618556726,
+      "end": 46.16437113402064,
+      "punctuation": ".",
+      "duration": 0.7103505154639175
     }
   ],
-  "phrases": [
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "The",
-          "start": 0,
-          "end": 0.45,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "Xiaomi",
-          "start": 0.45,
-          "end": 0.95,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "15",
-          "start": 0.95,
-          "end": 1.45,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "Ultra",
-          "start": 1.45,
-          "end": 1.95,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "is",
-          "start": 1.95,
-          "end": 2.35,
-          "punctuation": ""
-        }
-      ],
-      "start": 0,
-      "end": 2.35,
-      "text": "The Xiaomi 15 Ultra is"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "made",
-          "start": 2.35,
-          "end": 2.85,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "for",
-          "start": 2.85,
-          "end": 3.3,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "users",
-          "start": 3.3,
-          "end": 3.8,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "who",
-          "start": 3.8,
-          "end": 4.25,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "love",
-          "start": 4.25,
-          "end": 4.75,
-          "punctuation": ""
-        }
-      ],
-      "start": 2.35,
-      "end": 4.75,
-      "text": "made for users who love"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "photography",
-          "start": 4.75,
-          "end": 5.25,
-          "punctuation": "."
-        }
-      ],
-      "start": 4.75,
-      "end": 5.25,
-      "text": "photography."
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "The",
-          "start": 5.55,
-          "end": 6,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "main",
-          "start": 6,
-          "end": 6.5,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "camera",
-          "start": 6.5,
-          "end": 7,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "uses",
-          "start": 7,
-          "end": 7.5,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "a",
-          "start": 7.5,
-          "end": 7.85,
-          "punctuation": ""
-        }
-      ],
-      "start": 5.55,
-      "end": 7.85,
-      "text": "The main camera uses a"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "large",
-          "start": 7.85,
-          "end": 8.35,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "sensor",
-          "start": 8.35,
-          "end": 8.85,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "that",
-          "start": 8.85,
-          "end": 9.35,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "captures",
-          "start": 9.35,
-          "end": 9.85,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "detailed",
-          "start": 9.85,
-          "end": 10.35,
-          "punctuation": ""
-        }
-      ],
-      "start": 7.85,
-      "end": 10.35,
-      "text": "large sensor that captures detailed"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "and",
-          "start": 10.35,
-          "end": 10.8,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "sharp",
-          "start": 10.8,
-          "end": 11.3,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "photos",
-          "start": 11.3,
-          "end": 11.8,
-          "punctuation": "."
-        }
-      ],
-      "start": 10.35,
-      "end": 11.8,
-      "text": "and sharp photos."
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "Low",
-          "start": 12.1,
-          "end": 12.55,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "light",
-          "start": 12.55,
-          "end": 13.05,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "performance",
-          "start": 13.05,
-          "end": 13.55,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "is",
-          "start": 13.55,
-          "end": 13.95,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "excellent",
-          "start": 13.95,
-          "end": 14.45,
-          "punctuation": ""
-        }
-      ],
-      "start": 12.1,
-      "end": 14.45,
-      "text": "Low light performance is excellent"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "and",
-          "start": 14.45,
-          "end": 14.9,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "images",
-          "start": 14.9,
-          "end": 15.4,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "look",
-          "start": 15.4,
-          "end": 15.9,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "bright",
-          "start": 15.9,
-          "end": 16.4,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "and",
-          "start": 16.4,
-          "end": 16.85,
-          "punctuation": ""
-        }
-      ],
-      "start": 14.45,
-      "end": 16.85,
-      "text": "and images look bright and"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "clear",
-          "start": 16.85,
-          "end": 17.35,
-          "punctuation": "."
-        }
-      ],
-      "start": 16.85,
-      "end": 17.35,
-      "text": "clear."
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "Leica",
-          "start": 17.65,
-          "end": 18.15,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "tuning",
-          "start": 18.15,
-          "end": 18.65,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "improves",
-          "start": 18.65,
-          "end": 19.15,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "color",
-          "start": 19.15,
-          "end": 19.65,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "and",
-          "start": 19.65,
-          "end": 20.1,
-          "punctuation": ""
-        }
-      ],
-      "start": 17.65,
-      "end": 20.1,
-      "text": "Leica tuning improves color and"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "contrast",
-          "start": 20.1,
-          "end": 20.6,
-          "punctuation": "."
-        }
-      ],
-      "start": 20.1,
-      "end": 20.6,
-      "text": "contrast."
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "Zoom",
-          "start": 20.9,
-          "end": 21.4,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "performance",
-          "start": 21.4,
-          "end": 21.9,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "is",
-          "start": 21.9,
-          "end": 22.3,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "also",
-          "start": 22.3,
-          "end": 22.8,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "very",
-          "start": 22.8,
-          "end": 23.3,
-          "punctuation": ""
-        }
-      ],
-      "start": 20.9,
-      "end": 23.3,
-      "text": "Zoom performance is also very"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "impressive",
-          "start": 23.3,
-          "end": 23.8,
-          "punctuation": "."
-        }
-      ],
-      "start": 23.3,
-      "end": 23.8,
-      "text": "impressive."
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "The",
-          "start": 24.1,
-          "end": 24.55,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "display",
-          "start": 24.55,
-          "end": 25.05,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "is",
-          "start": 25.05,
-          "end": 25.45,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "bright",
-          "start": 25.45,
-          "end": 25.95,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "and",
-          "start": 25.95,
-          "end": 26.4,
-          "punctuation": ""
-        }
-      ],
-      "start": 24.1,
-      "end": 26.4,
-      "text": "The display is bright and"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "colorful",
-          "start": 26.4,
-          "end": 26.9,
-          "punctuation": ","
-        }
-      ],
-      "start": 26.4,
-      "end": 26.9,
-      "text": "colorful,"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "making",
-          "start": 26.9,
-          "end": 27.4,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "photos",
-          "start": 27.4,
-          "end": 27.9,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "and",
-          "start": 27.9,
-          "end": 28.35,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "videos",
-          "start": 28.35,
-          "end": 28.85,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "look",
-          "start": 28.85,
-          "end": 29.35,
-          "punctuation": ""
-        }
-      ],
-      "start": 26.9,
-      "end": 29.35,
-      "text": "making photos and videos look"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "amazing",
-          "start": 29.35,
-          "end": 29.85,
-          "punctuation": "."
-        }
-      ],
-      "start": 29.35,
-      "end": 29.85,
-      "text": "amazing."
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "Performance",
-          "start": 30.15,
-          "end": 30.65,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "is",
-          "start": 30.65,
-          "end": 31.05,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "strong",
-          "start": 31.05,
-          "end": 31.55,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "and",
-          "start": 31.55,
-          "end": 32,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "handles",
-          "start": 32,
-          "end": 32.5,
-          "punctuation": ""
-        }
-      ],
-      "start": 30.15,
-      "end": 32.5,
-      "text": "Performance is strong and handles"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "photo",
-          "start": 32.5,
-          "end": 33,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "processing",
-          "start": 33,
-          "end": 33.5,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "smoothly",
-          "start": 33.5,
-          "end": 34,
-          "punctuation": "."
-        }
-      ],
-      "start": 32.5,
-      "end": 34,
-      "text": "photo processing smoothly."
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "Battery",
-          "start": 34.3,
-          "end": 34.8,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "life",
-          "start": 34.8,
-          "end": 35.3,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "is",
-          "start": 35.3,
-          "end": 35.7,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "solid",
-          "start": 35.7,
-          "end": 36.2,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "and",
-          "start": 36.2,
-          "end": 36.65,
-          "punctuation": ""
-        }
-      ],
-      "start": 34.3,
-      "end": 36.65,
-      "text": "Battery life is solid and"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "fast",
-          "start": 36.65,
-          "end": 37.15,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "charging",
-          "start": 37.15,
-          "end": 37.65,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "helps",
-          "start": 37.65,
-          "end": 38.15,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "save",
-          "start": 38.15,
-          "end": 38.65,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "time",
-          "start": 38.65,
-          "end": 39.15,
-          "punctuation": "."
-        }
-      ],
-      "start": 36.65,
-      "end": 39.15,
-      "text": "fast charging helps save time."
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "The",
-          "start": 39.45,
-          "end": 39.9,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "phone",
-          "start": 39.9,
-          "end": 40.4,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "feels",
-          "start": 40.4,
-          "end": 40.9,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "premium",
-          "start": 40.9,
-          "end": 41.4,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "and",
-          "start": 41.4,
-          "end": 41.85,
-          "punctuation": ""
-        }
-      ],
-      "start": 39.45,
-      "end": 41.85,
-      "text": "The phone feels premium and"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "well",
-          "start": 41.85,
-          "end": 42.35,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "built",
-          "start": 42.35,
-          "end": 42.85,
-          "punctuation": "."
-        }
-      ],
-      "start": 41.85,
-      "end": 42.85,
-      "text": "well built."
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "If",
-          "start": 43.15,
-          "end": 43.55,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "camera",
-          "start": 43.55,
-          "end": 44.05,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "quality",
-          "start": 44.05,
-          "end": 44.55,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "is",
-          "start": 44.55,
-          "end": 44.95,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "your",
-          "start": 44.95,
-          "end": 45.45,
-          "punctuation": ""
-        }
-      ],
-      "start": 43.15,
-      "end": 45.45,
-      "text": "If camera quality is your"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "top",
-          "start": 45.45,
-          "end": 45.9,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "priority",
-          "start": 45.9,
-          "end": 46.4,
-          "punctuation": ","
-        }
-      ],
-      "start": 45.45,
-      "end": 46.4,
-      "text": "top priority,"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "the",
-          "start": 46.4,
-          "end": 46.85,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "Xiaomi",
-          "start": 46.85,
-          "end": 47.35,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "15",
-          "start": 47.35,
-          "end": 47.85,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "Ultra",
-          "start": 47.85,
-          "end": 48.35,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "is",
-          "start": 48.35,
-          "end": 48.75,
-          "punctuation": ""
-        }
-      ],
-      "start": 46.4,
-      "end": 48.75,
-      "text": "the Xiaomi 15 Ultra is"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "one",
-          "start": 48.75,
-          "end": 49.2,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "of",
-          "start": 49.2,
-          "end": 49.6,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "the",
-          "start": 49.6,
-          "end": 50.05,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "best",
-          "start": 50.05,
-          "end": 50.55,
-          "punctuation": ""
-        },
-        {
-          "type": "word",
-          "text": "choices",
-          "start": 50.55,
-          "end": 51.05,
-          "punctuation": ""
-        }
-      ],
-      "start": 48.75,
-      "end": 51.05,
-      "text": "one of the best choices"
-    },
-    {
-      "words": [
-        {
-          "type": "word",
-          "text": "available",
-          "start": 51.05,
-          "end": 51.55,
-          "punctuation": "."
-        }
-      ],
-      "start": 51.05,
-      "end": 51.55,
-      "text": "available."
-    }
-  ],
-  "totalDuration": 51.55,
+  "totalDuration": 49.82,
   "images": {
     "img1": "https://fatafatsewa.com/storage/media/10067/Xiaomi-15-Ultra-Price-in-Nepal.jpg"
   },
-  "specs": [
+  "features": [
     {
       "label": "Display",
       "value": "6.73-inch LTPO OLED"
@@ -1658,7 +848,6 @@
   ],
   "metadata": {
     "wordCount": 102,
-    "estimatedDuration": 51.55,
-    "generatedAt": "2025-12-16T12:44:18.530Z"
+    "generatedAt": "2025-12-16T13:52:11.135Z"
   }
 }

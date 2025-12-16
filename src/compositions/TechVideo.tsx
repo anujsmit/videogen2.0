@@ -9,67 +9,152 @@ import {
   Easing,
   spring,
   Sequence,
+  Loop,
+  Video,
 } from "remotion";
-import { CapCutCaption } from "../components/CapCutCaption";
-export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.json' } }: { device: any }) => {
-  const data = require(`../data/timelines/${device.timelineFile}`);
+import { useEffect, useState } from "react";
+
+export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { device: any }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const OUTRO_AUDIO = "device.mp3";
+
+
+  useEffect(() => {
+    try {
+      const timelineData = require(`../data/timelines/${device.timelineFile}`);
+
+      // Ensure words have a 'duration' property for safer calculation if it's missing from source
+      const processedWords = (timelineData.timeline || []).map((word: any) => ({
+        ...word,
+        duration: word.end - word.start,
+      }));
+
+      const processedData = {
+        ...timelineData,
+        timeline: processedWords,
+        phrases: timelineData.phrases || [],
+        images: timelineData.images || { img1: 'default-image.jpg' },
+        features: timelineData.features || timelineData.specs || [],
+        model: timelineData.model || 'Unknown Device',
+        audio: timelineData.audio || null,
+      };
+      setData(processedData);
+    } catch (error) {
+      console.error("Failed to load timeline data:", error);
+    } finally {
+      setLoading(false);
+    }
+  }, [device.timelineFile]);
+
   const TRANSITION_DURATION = 30;
   const frame = useCurrentFrame();
-  const { fps, width } = useVideoConfig();
+  const { fps, width, height } = useVideoConfig();
 
-  const groupSize = 6;
-  const wordGroups: { words: typeof data.timeline; startTime: number; endTime: number }[] = [];
-
-  let currentIndex = 0;
-  while (currentIndex < data.timeline.length) {
-    const groupWords = data.timeline.slice(currentIndex, currentIndex + groupSize);
-    if (groupWords.length === 0) break;
-
-    const startTime = groupWords[0].start;
-    const endTime = groupWords[groupWords.length - 1].end;
-
-    if (!isFinite(startTime) || !isFinite(endTime) || endTime <= startTime) {
-      console.warn("Skipping invalid timeline group data.");
-      currentIndex += groupSize;
-      continue;
-    }
-
-    wordGroups.push({
-      words: groupWords,
-      startTime,
-      endTime,
-    });
-
-    currentIndex += groupSize;
+  if (loading || !data) {
+    return (
+      <AbsoluteFill style={{ backgroundColor: "#0b0b0f", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ fontSize: 48, color: "white" }}>Loading...</div>
+      </AbsoluteFill>
+    );
   }
 
-  const mainContentEndFrame =
-    wordGroups.length > 0
-      ? Math.ceil(wordGroups[wordGroups.length - 1].endTime * fps)
-      : 1;
+  // --- Word Grouping Logic (Remains the same as before) ---
+  const groupSize = 5;
+  const wordGroups: {
+    words: any[];
+    startTime: number;
+    endTime: number;
+    duration: number;
+    id: string;
+  }[] = [];
+
+  const sourcePhrases = data.phrases && data.phrases.length > 0 ? data.phrases : null;
+
+  if (sourcePhrases) {
+    sourcePhrases.forEach((phrase: any, index: number) => {
+      if (phrase.words && phrase.words.length > 0) {
+        wordGroups.push({
+          words: phrase.words.map((word: any) => ({ ...word, duration: word.end - word.start })),
+          startTime: phrase.start,
+          endTime: phrase.end,
+          duration: phrase.end - phrase.start,
+          id: `phrase-${index}`,
+        });
+      }
+    });
+  } else {
+    let currentIndex = 0;
+    while (currentIndex < data.timeline.length) {
+      const groupWords = data.timeline.slice(currentIndex, currentIndex + groupSize);
+      if (groupWords.length === 0) break;
+
+      const startTime = groupWords[0].start;
+      const endTime = groupWords[groupWords.length - 1].end;
+      const duration = endTime - startTime;
+
+      wordGroups.push({
+        words: groupWords,
+        startTime,
+        endTime,
+        duration,
+        id: `group-${currentIndex}`,
+      });
+
+      currentIndex += groupSize;
+    }
+  }
+
+  const lastGroupEndTime = wordGroups.length > 0 ? wordGroups[wordGroups.length - 1].endTime : 0;
+  const mainContentEndFrame = Math.ceil(lastGroupEndTime * fps) + 30;
 
   const finalScreenStartFrame = mainContentEndFrame - TRANSITION_DURATION;
   const safeFinalScreenStartFrame = Math.max(0, finalScreenStartFrame);
 
   const currentTime = frame / fps;
-  let activeGroupIndex = 0;
+
+  let activeGroupIndex = -1;
   let groupProgress = 0;
 
   for (let i = 0; i < wordGroups.length; i++) {
-    if (currentTime >= wordGroups[i].startTime && currentTime <= wordGroups[i].endTime) {
+    const group = wordGroups[i];
+    if (currentTime >= group.startTime && currentTime <= group.endTime) {
       activeGroupIndex = i;
-      const duration = wordGroups[i].endTime - wordGroups[i].startTime;
-      groupProgress = duration > 0 ? (currentTime - wordGroups[i].startTime) / duration : 1;
+      groupProgress = group.duration > 0
+        ? (currentTime - group.startTime) / group.duration
+        : 1;
       break;
     }
   }
 
-  const groupFade = interpolate(groupProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0], {
+  // Added buffer logic for smooth entry/exit transition points
+  if (activeGroupIndex === -1 && wordGroups.length > 0) {
+    const firstGroup = wordGroups[0];
+    const lastGroup = wordGroups[wordGroups.length - 1];
+
+    if (currentTime < firstGroup.startTime && currentTime >= firstGroup.startTime - 0.5) {
+      activeGroupIndex = 0;
+      groupProgress = interpolate(currentTime, [firstGroup.startTime - 0.5, firstGroup.startTime], [0, 0.01]);
+    } else if (currentTime > lastGroup.endTime && currentTime <= lastGroup.endTime + 0.5) {
+      activeGroupIndex = wordGroups.length - 1;
+      groupProgress = 1;
+    }
+  }
+
+  // Enhanced animations
+  const groupFade = interpolate(groupProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
+    easing: Easing.bezier(0.4, 0, 0.2, 1),
   });
 
-  const slideAnimation = interpolate(groupProgress, [0, 0.1, 0.9, 1], [50, 0, 0, -50], {
+  const slideAnimation = interpolate(groupProgress, [0, 0.2, 0.8, 1], [80, 0, 0, -80], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.bezier(0.4, 0, 0.2, 1),
+  });
+
+  const scaleAnimation = interpolate(groupProgress, [0, 0.1, 0.9, 1], [0.95, 1, 1, 0.95], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -81,74 +166,93 @@ export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.j
     {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
+      easing: Easing.bezier(0.4, 0, 0.2, 1),
     }
   );
 
-  const finalScreenTime = frame - safeFinalScreenStartFrame;
+  const finalScreenTime = Math.max(0, frame - safeFinalScreenStartFrame);
 
-  const finalScreenOpacity = interpolate(finalScreenTime, [0, TRANSITION_DURATION], [0, 1], {
+  const finalScreenOpacity = interpolate(
+    finalScreenTime,
+    [0, TRANSITION_DURATION * 0.5],
+    [0, 1],
+    {
+      extrapolateRight: "clamp",
+      easing: Easing.bezier(0.4, 0, 0.2, 1),
+    }
+  );
+
+  // Enhanced layer animations for final screen
+  const layer1Y = interpolate(finalScreenTime, [0, 40], [100, 0], {
+    easing: Easing.out(Easing.bezier(0.34, 1.56, 0.64, 1)),
     extrapolateRight: "clamp",
   });
 
-  const layer1Y = interpolate(finalScreenTime, [0, 30], [100, 0], {
-    easing: Easing.out(Easing.cubic),
+  const layer3Y = interpolate(finalScreenTime, [30, 70], [100, 0], {
+    easing: Easing.out(Easing.bezier(0.34, 1.56, 0.64, 1)),
     extrapolateRight: "clamp",
   });
 
-  const layer2Y = interpolate(finalScreenTime, [15, 45], [100, 0], {
-    easing: Easing.out(Easing.cubic),
-    extrapolateRight: "clamp",
-  });
-
-  const layer3Y = interpolate(finalScreenTime, [30, 60], [100, 0], {
-    easing: Easing.out(Easing.cubic),
-    extrapolateRight: "clamp",
-  });
-
-  const layer4Y = interpolate(finalScreenTime, [45, 75], [100, 0], {
-    easing: Easing.out(Easing.cubic),
+  const layer4Y = interpolate(finalScreenTime, [45, 85], [100, 0], {
+    easing: Easing.out(Easing.bezier(0.34, 1.56, 0.64, 1)),
     extrapolateRight: "clamp",
   });
 
   const button1Spring = spring({
     frame: finalScreenTime - 60,
     fps,
-    config: { damping: 10, mass: 0.5 },
+    config: { damping: 8, mass: 0.7, stiffness: 100 },
   });
 
   const imageScale = spring({
     frame: finalScreenTime - 15,
     fps,
-    config: { damping: 15, mass: 0.7 },
+    config: { damping: 12, mass: 0.8, stiffness: 100 },
   });
+
+  const pulseValue = Math.sin(frame * 0.1) * 0.05 + 1;
 
   return (
     <AbsoluteFill
       style={{
         backgroundColor: "#0b0b0f",
-        fontFamily: "'Inter', system-ui, sans-serif",
+        fontFamily: "'Inter', 'SF Pro Display', -apple-system, system-ui, sans-serif",
         overflow: "hidden",
       }}
     >
+      {/* Enhanced animations (CSS Keyframes) */}
       <style>
         {`
-          @keyframes pulse {
-            0%, 100% { opacity: 0.5; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.05); }
-          }
-          
           @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
           }
           
-          @keyframes slide {
-            0% { transform: translateX(-100%) rotate(15deg); }
-            100% { transform: translateX(100%) rotate(15deg); }
+          @keyframes pulseGlow {
+            0%, 100% { 
+              opacity: 0.3;
+              filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.3));
+            }
+            50% { 
+              opacity: 0.6;
+              filter: drop-shadow(0 0 30px rgba(108, 99, 255, 0.6));
+            }
+          }
+          
+          @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+          }
+          
+          @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
           }
         `}
       </style>
 
+      {/* Background effects */}
       <div
         style={{
           position: "absolute",
@@ -156,33 +260,47 @@ export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.j
           left: 0,
           right: 0,
           bottom: 0,
-          background: "radial-gradient(circle at 70% 50%, rgba(108, 99, 255, 0.1) 0%, transparent 70%)",
-          opacity: interpolate(frame, [0, 30], [0, 1], { extrapolateRight: "clamp" }),
+          background: `
+            radial-gradient(circle at 30% 20%, rgba(108, 99, 255, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 70% 80%, rgba(255, 107, 157, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 20% 80%, rgba(0, 16, 233, 0.08) 0%, transparent 50%)
+          `,
+          animation: "gradientFlow 20s ease infinite",
+          backgroundSize: "200% 200%",
+          opacity: 0.6,
         }}
       />
 
       <Sequence from={0} durationInFrames={mainContentEndFrame}>
-        {data.audio && <Audio src={staticFile(data.audio)} />}
+        {data.audio && (
+          // Audio synchronization fix: starts at frame 0 of the sequence
+          <Audio
+            src={staticFile(data.audio.replace(/^\//, ''))}
+            volume={0.9}
+            startFrom={0}
+          />
+        )}
 
         <div
           style={{
             opacity: mainContentOpacity,
             display: "flex",
-            flexDirection: "row",
+            flexDirection: width > 1024 ? "row" : "column",
             height: "100%",
-            padding: width > 768 ? "60px 80px" : "40px 20px",
+            padding: width > 1024 ? "80px 100px" : "60px 40px",
             alignItems: "center",
-            justifyContent: "space-between",
-            gap: width > 768 ? 80 : 40,
+            justifyContent: width > 1024 ? "space-between" : "flex-start",
+            gap: width > 1024 ? 100 : 60,
             position: "relative",
             width: "100%",
-            zIndex: 1,
+            zIndex: 2,
           }}
         >
+          {/* Device Image Section (Unchanged) */}
           <div
             style={{
-              width: width > 768 ? "45%" : "100%",
-              height: "100%",
+              width: width > 1024 ? "45%" : "100%",
+              height: width > 1024 ? "100%" : "50%",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -192,49 +310,88 @@ export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.j
           >
             <div
               style={{
-                width: "90%",
+                position: "relative",
+                width: "100%",
                 maxWidth: 600,
-                height: "85%",
+                height: "100%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                animationDelay: "0.5s",
               }}
             >
+              {/* Glow effect */}
+              <div
+                style={{
+                  position: "absolute",
+                  width: "120%",
+                  height: "120%",
+                  background: "radial-gradient(circle, rgba(108, 99, 255, 0.2) 0%, transparent 70%)",
+                  filter: "blur(40px)",
+                  animation: "pulseGlow 4s ease-in-out infinite",
+                }}
+              />
+
               <Img
                 src={data.images.img1}
                 style={{
-                  // width: "100%",
-                  height: "60%",
-                  objectFit: "cover",
-                  borderRadius: 32,
+                  width: "100%",
+                  height: "auto",
+                  maxHeight: "85%",
+                  objectFit: "contain",
+                  borderRadius: 40,
+                  transform: `scale(${pulseValue})`,
+                  transition: "transform 0.5s ease",
                   boxShadow: `
-                    0 40px 100px rgba(108, 99, 255, 0.3),
-                    0 20px 60px rgba(0,0,0,0.8),
-                    inset 0 1px 0 rgba(255,255,255,0.1)
+                    0 50px 100px rgba(108, 99, 255, 0.4),
+                    0 25px 80px rgba(0, 0, 0, 0.8),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.15)
                   `,
-                  border: "1px solid rgba(255,255,255,0.1)",
+                  border: "2px solid rgba(255, 255, 255, 0.15)",
+                  position: "relative",
+                  zIndex: 1,
+                }}
+              />
+
+              {/* Reflective overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: "linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.08) 50%, transparent 60%)",
+                  borderRadius: 40,
+                  pointerEvents: "none",
+                  zIndex: 2,
+                  animation: "shimmer 3s infinite linear",
                 }}
               />
             </div>
 
+            {/* Device name with enhanced styling */}
             <div
               style={{
                 marginTop: 40,
-                padding: "12px 24px",
-                backgroundColor: "rgba(255,255,255,0.05)",
-                borderRadius: 20,
-                border: "1px solid rgba(255,255,255,0.1)",
-                backdropFilter: "blur(10px)",
+                padding: "16px 32px",
+                backgroundColor: "rgba(255, 255, 255, 0.07)",
+                borderRadius: 24,
+                border: "1px solid rgba(255, 255, 255, 0.15)",
+                backdropFilter: "blur(20px)",
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
               }}
             >
               <h3
                 style={{
-                  fontSize: width > 768 ? 24 : 20,
-                  fontWeight: 600,
-                  color: "#ffffff",
+                  fontSize: width > 768 ? 28 : 22,
+                  fontWeight: 700,
+                  background: "linear-gradient(135deg, #ffffff 0%, #a5a5a5 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
                   margin: 0,
                   textAlign: "center",
+                  letterSpacing: "0.02em",
                 }}
               >
                 {data.model}
@@ -242,193 +399,388 @@ export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.j
             </div>
           </div>
 
-          {width > 768 && (
-            <div
-              style={{
-                width: "55%",
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                position: "relative",
-              }}
-            >
-              {wordGroups.length > 1 && (
+          {/* Text Content Section */}
+          <div
+            style={{
+              width: width > 1024 ? "55%" : "100%",
+              height: width > 1024 ? "100%" : "50%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              position: "relative",
+              padding: width > 1024 ? "0 0 0 40px" : "20px 0",
+            }}
+          >
+            {/* Progress indicator (Unchanged) */}
+            {wordGroups.length > 1 && width > 768 && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: -40,
+                  right: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                  opacity: 0.9,
+                  zIndex: 10,
+                }}
+              >
+                <span style={{
+                  color: "rgba(255, 255, 255, 0.8)",
+                  fontSize: 14,
+                  fontWeight: 600,
+                  letterSpacing: "0.05em",
+                }}>
+                  {Math.min(activeGroupIndex + 1, wordGroups.length)} / {wordGroups.length}
+                </span>
                 <div
                   style={{
-                    position: "absolute",
-                    top: -40,
-                    right: 0,
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 12,
-                    opacity: 0.8,
+                    width: 120,
+                    height: 4,
+                    backgroundColor: "rgba(255, 255, 255, 0.15)",
+                    borderRadius: 2,
+                    overflow: "hidden",
+                    boxShadow: "inset 0 1px 2px rgba(0, 0, 0, 0.3)",
                   }}
                 >
-                  <span style={{ color: "rgba(255,255,255,0.6)", fontSize: 14, fontWeight: 500 }}>
-                    {activeGroupIndex + 1} of {wordGroups.length}
-                  </span>
                   <div
                     style={{
-                      width: 80,
-                      height: 3,
-                      backgroundColor: "rgba(255,255,255,0.1)",
-                      borderRadius: 1.5,
+                      width: `${interpolate(
+                        currentTime,
+                        [0, lastGroupEndTime || 1],
+                        [0, 100]
+                      )}%`,
+                      height: "100%",
+                      background: "linear-gradient(90deg, #6C63FF, #FF6B9D, #0010e9)",
+                      transition: "width 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                      position: "relative",
                       overflow: "hidden",
                     }}
                   >
                     <div
                       style={{
-                        width: `${interpolate(frame, [0, mainContentEndFrame], [0, 100], {
-                          extrapolateLeft: "clamp",
-                          extrapolateRight: "clamp",
-                        })}%`,
-                        height: "100%",
-                        background: "linear-gradient(90deg, #6C63FF, #FF6B9D)",
-                        transition: "width 0.1s linear",
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent)",
+                        animation: "shimmer 2s infinite linear",
                       }}
                     />
                   </div>
                 </div>
-              )}
+              </div>
+            )}
 
-              <div
-                style={{
-                  position: "relative",
-                  width: "100%",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                }}
-              >
-                {wordGroups.map((group, groupIndex) => {
-                  const isActive = groupIndex === activeGroupIndex;
+            {/* Word Groups Display Container (Container remains the same) */}
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                height: width > 1024 ? "100%" : "400px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                overflow: "hidden",
+              }}
+            >
+              {wordGroups.map((group, groupIndex) => {
+                const isActive = groupIndex === activeGroupIndex;
+                const isPast = groupIndex < activeGroupIndex;
+                // const isFuture = groupIndex > activeGroupIndex; // Not used directly in logic below
 
-                  return (
-                    <div
-                      key={groupIndex}
-                      style={{
-                        position: "absolute",
-                        width: "100%",
-                        opacity: isActive ? groupFade : 0,
-                        transform: isActive ? `translateX(${slideAnimation}px)` : "translateX(100px)",
-                        transition: "opacity 0.5s ease, transform 0.5s ease",
-                        pointerEvents: "none",
-                      }}
-                    >
-                      <div style={{ marginBottom: 30, opacity: 0.8 }}>
-                        <div
-                          style={{
-                            display: "inline-flex",
-                            alignItems: "center",
-                            backgroundColor: "rgba(108, 99, 255, 0.15)",
-                            padding: "8px 16px",
-                            borderRadius: 20,
-                            border: "1px solid rgba(108, 99, 255, 0.3)",
-                          }}
-                        >
-                          <span
-                            style={{
-                              fontSize: 14,
-                              fontWeight: 600,
-                              color: "#6C63FF",
-                              letterSpacing: "0.05em",
-                            }}
-                          >
-                            {groupIndex === 0 && "INTRODUCTION"}
-                            {groupIndex === 1 && "PERFORMANCE"}
-                            {groupIndex === 2 && "CAMERA"}
-                            {groupIndex === 3 && "FEATURES"}
-                            {groupIndex > 3 && "INNOVATION"}
-                          </span>
-                        </div>
-                      </div>
+                // Set the default transform for past and future groups to move them off-screen
+                const offScreenTransform = isPast
+                  ? `translateY(-150%) translateX(-100px) scale(0.95)`
+                  : `translateY(50%) translateX(100px) scale(0.95)`;
 
-                      <h2
+                return (
+                  <div
+                    key={group.id}
+                    style={{
+                      position: "absolute",
+                      width: "100%",
+                      // FIX 1: Opacity is now driven entirely by isActive/groupFade
+                      opacity: isActive ? groupFade : 0,
+
+                      transform: isActive
+                        ? `translateY(-50%) translateX(${slideAnimation}px) scale(${scaleAnimation})`
+                        : `translateY(-50%) ${offScreenTransform}`,
+
+                      transition: "opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)",
+                      pointerEvents: "none",
+                      top: '50%',
+                    }}
+                  >
+                    {/* Section Label (Unchanged) */}
+                    <div style={{ marginBottom: 30 }}>
+                      <div
                         style={{
-                          fontSize: 48,
-                          fontWeight: 700,
-                          color: "#ffffff",
-                          marginBottom: 30,
-                          lineHeight: 1.1,
-                          background: "linear-gradient(135deg, #ffffff 0%, #a5a5a5 100%)",
-                          WebkitBackgroundClip: "text",
-                          WebkitTextFillColor: "transparent",
-                          backgroundClip: "text",
+                          display: "inline-flex",
+                          alignItems: "center",
+                          background: isActive
+                            ? "linear-gradient(135deg, rgba(108, 99, 255, 0.2), rgba(255, 107, 157, 0.15))"
+                            : "rgba(108, 99, 255, 0.1)",
+                          padding: "10px 20px",
+                          borderRadius: 20,
+                          border: `1px solid ${isActive ? "rgba(108, 99, 255, 0.4)" : "rgba(108, 99, 255, 0.2)"}`,
+                          backdropFilter: "blur(10px)",
+                          transform: isActive ? "scale(1.05)" : "scale(1)",
+                          transition: "all 0.3s ease",
                         }}
                       >
-                        {groupIndex === 0 && "Revolutionary Design"}
-                        {groupIndex === 1 && "Advanced Performance"}
-                        {groupIndex === 2 && "Professional Camera"}
-                        {groupIndex === 3 && "Smart Features"}
-                        {groupIndex > 3 && "Future Innovation"}
-                      </h2>
-
-                      <div style={{ marginBottom: 40 }}>
-                        // In the CapCutCaption usage:
-                        <CapCutCaption
-                          words={group.words}
-                          fontSize={36}
-                          highlightColor="#6C63FF"
-                          inactiveColor="rgba(255,255,255,0.3)"
-                          withBackground={false}
-                          withUnderline={true}
-                          fontFamily="'Inter', system-ui, sans-serif"
-                          typewriterEffect={true}  // Enable typewriter effect
-                          maxWordsInQueue={5}
+                        <span
                           style={{
-                            justifyContent: "flex-start",
-                            alignItems: "flex-start",
-                            bottom: "auto",
-                            position: "relative",
+                            fontSize: 14,
+                            fontWeight: 700,
+                            color: isActive ? "#6C63FF" : "rgba(108, 99, 255, 0.7)",
+                            letterSpacing: "0.1em",
+                            textTransform: "uppercase",
                           }}
-                        />
+                        >
+                          {groupIndex === 0 && "INTRODUCTION"}
+                          {groupIndex === 1 && "DESIGN & DISPLAY"}
+                          {groupIndex === 2 && "PERFORMANCE"}
+                          {groupIndex === 3 && "CAMERA"}
+                          {groupIndex === 4 && "BATTERY"}
+                          {groupIndex > 4 && "FEATURES"}
+                        </span>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
+
+                    {/* Group Title (Unchanged) */}
+                    <h2
+                      style={{
+                        fontSize: width > 768 ? 52 : 40,
+                        fontWeight: 800,
+                        background: "linear-gradient(135deg, #ffffff 0%, #6C63FF 100%)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        backgroundClip: "text",
+                        marginBottom: 30,
+                        lineHeight: 1.1,
+                        opacity: isActive ? 1 : 0.7,
+                      }}
+                    >
+                      {groupIndex === 0 && "Next Generation"}
+                      {groupIndex === 1 && "Premium Design"}
+                      {groupIndex === 2 && "Powerful Performance"}
+                      {groupIndex === 3 && "Advanced Camera"}
+                      {groupIndex === 4 && "All-Day Battery"}
+                      {groupIndex > 4 && "Smart Features"}
+                    </h2>
+
+                    {/* FIX 2: Full Chunk Text with Dynamic Highlighting */}
+                    <div style={{ marginBottom: 40 }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexWrap: "wrap",
+                          gap: 8,
+                          alignItems: "center",
+                        }}
+                      >
+                        {group.words.map((word: any, wordIndex: number) => {
+                          const wordStartFrame = word.start * fps;
+                          const wordEndFrame = word.end * fps;
+                          // Check if the word is currently being spoken
+                          const isWordActive = frame >= wordStartFrame && frame <= wordEndFrame;
+
+                          const wordDurationFrames = (word.duration * fps) || (wordEndFrame - wordStartFrame);
+
+                          const wordProgress = isWordActive
+                            ? (frame - wordStartFrame) / wordDurationFrames
+                            : 0;
+
+                          // Handle special cases (like "6.3 inch" should stay together)
+                          const displayText = word.text === "6." && group.words[wordIndex + 1]?.text === "3"
+                            ? "6.3"
+                            : word.text;
+
+                          // Skip the next word if we combined it
+                          if (word.text === "3" && group.words[wordIndex - 1]?.text === "6.") {
+                            return null;
+                          }
+
+                          return (
+                            <div
+                              key={`${wordIndex}-${word.text}`}
+                              style={{
+                                display: "inline-block",
+                                position: "relative",
+                                // Only apply the vertical bounce/scale if the word is active
+                                transform: isWordActive
+                                  ? `translateY(${interpolate(
+                                    wordProgress,
+                                    [0, 0.2, 0.8, 1],
+                                    [0, -5, -5, 0]
+                                  )}px) scale(${interpolate(
+                                    wordProgress,
+                                    [0, 0.2, 0.8, 1],
+                                    [1, 1.1, 1.1, 1]
+                                  )})`
+                                  : "none",
+                                transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                              }}
+                            >
+                              <span
+                                style={{
+                                  fontFamily: "'SF Pro Display', -apple-system, system-ui, sans-serif",
+                                  fontSize: width > 768 ? 40 : 32,
+                                  fontWeight: isWordActive ? 700 : 500,
+                                  // Color logic: White for active, faded white for past, darker faded white for future
+                                  color: isWordActive
+                                    ? "#ffffff"
+                                    : frame > wordEndFrame
+                                      ? "rgba(255, 255, 255, 0.6)"
+                                      : "rgba(255, 255, 255, 0.4)",
+
+                                  // Gradient/Text-fill only for active word
+                                  background: isWordActive
+                                    ? "linear-gradient(135deg, #6C63FF, #FF6B9D)"
+                                    : "transparent",
+                                  WebkitBackgroundClip: isWordActive ? "text" : "unset",
+                                  WebkitTextFillColor: isWordActive ? "transparent" : "unset",
+                                  backgroundClip: isWordActive ? "text" : "unset",
+
+                                  // Glow only for active word
+                                  textShadow: isWordActive
+                                    ? `0 0 20px rgba(108, 99, 255, 0.5), 0 0 40px rgba(108, 99, 255, 0.3)`
+                                    : "none",
+
+                                  letterSpacing: "0.02em",
+                                  padding: "6px 8px",
+                                  borderRadius: 8,
+                                  position: "relative",
+                                  display: "inline-block",
+                                  transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                                }}
+                              >
+                                {displayText}
+
+                                {/* Active word underline effect (only visible if active) */}
+                                {isWordActive && (
+                                  <div
+                                    style={{
+                                      position: "absolute",
+                                      bottom: 2,
+                                      left: "10%",
+                                      right: "10%",
+                                      height: 3,
+                                      background: "linear-gradient(90deg, #6C63FF, #FF6B9D)",
+                                      borderRadius: 2,
+                                      transform: `scaleX(${wordProgress})`,
+                                      transformOrigin: "left center",
+                                      transition: "transform 0.1s linear",
+                                    }}
+                                  />
+                                )}
+
+                                {/* Glow effect for active word (only visible if active) */}
+                                {isWordActive && (
+                                  <div
+                                    style={{
+                                      position: "absolute",
+                                      top: "50%",
+                                      left: "50%",
+                                      width: "200%",
+                                      height: "200%",
+                                      background: "radial-gradient(circle, rgba(108, 99, 255, 0.2) 0%, transparent 70%)",
+                                      transform: "translate(-50%, -50%)",
+                                      zIndex: -1,
+                                      opacity: wordProgress,
+                                    }}
+                                  />
+                                )}
+                              </span>
+
+                              {/* Add punctuation with proper spacing */}
+                              {word.punctuation && (
+                                <span style={{
+                                  color: frame > wordEndFrame
+                                    ? "rgba(255, 255, 255, 0.6)"
+                                    : "rgba(255, 255, 255, 0.4)",
+                                  fontSize: width > 768 ? 40 : 32,
+                                  marginLeft: -4,
+                                }}>
+                                  {word.punctuation}
+                                </span>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-          )}
+          </div>
         </div>
 
+        {/* Enhanced progress dots (Unchanged) */}
         {wordGroups.length > 1 && width > 768 && (
           <div
             style={{
               position: "absolute",
-              bottom: 60,
+              bottom: 80,
               left: "50%",
               transform: "translateX(-50%)",
               display: "flex",
-              gap: 12,
+              gap: 16,
               zIndex: 10,
             }}
           >
-            {wordGroups.map((_, index) => (
-              <div
-                key={index}
-                style={{
-                  width: index === activeGroupIndex ? 32 : 12,
-                  height: 12,
-                  borderRadius: 6,
-                  background: index === activeGroupIndex
-                    ? "linear-gradient(90deg, #6C63FF, #FF6B9D)"
-                    : "rgba(255,255,255,0.2)",
-                  transition: "all 0.3s ease",
-                  opacity: index <= activeGroupIndex ? 1 : 0.4,
-                }}
-              />
-            ))}
+            {wordGroups.map((_, index) => {
+              const isActive = index === activeGroupIndex;
+              const isPast = index < activeGroupIndex;
+
+              return (
+                <div
+                  key={index}
+                  style={{
+                    width: isActive ? 40 : 12,
+                    height: 12,
+                    borderRadius: 6,
+                    background: isActive
+                      ? "linear-gradient(90deg, #6C63FF, #FF6B9D)"
+                      : isPast
+                        ? "rgba(108, 99, 255, 0.5)"
+                        : "rgba(255, 255, 255, 0.2)",
+                    transform: isActive ? "scale(1.2)" : "scale(1)",
+                    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                    opacity: isPast ? 0.7 : isActive ? 1 : 0.4,
+                    position: "relative",
+                    overflow: "hidden",
+                  }}
+                >
+                  {isActive && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)",
+                        animation: "shimmer 1.5s infinite linear",
+                      }}
+                    />
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
       </Sequence>
 
+      {/* Final Screen (Outro) (Unchanged) */}
       <Sequence from={safeFinalScreenStartFrame} durationInFrames={Infinity}>
         <Audio
           src={staticFile("device.mp3")}
           startFrom={0}
-          volume={1}
+          volume={0.9}
         />
 
         <AbsoluteFill
@@ -442,6 +794,7 @@ export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.j
             overflow: "hidden",
           }}
         >
+          {/* Background effects for final screen */}
           <div
             style={{
               position: "absolute",
@@ -450,203 +803,85 @@ export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.j
               right: 0,
               bottom: 0,
               background: `
-                radial-gradient(circle at 20% 30%, rgba(108, 99, 255, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(255, 107, 157, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 40% 80%, rgba(0, 16, 233, 0.1) 0%, transparent 40%)
+                radial-gradient(circle at 20% 30%, rgba(108, 99, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 107, 157, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(0, 16, 233, 0.15) 0%, transparent 50%)
               `,
-              filter: "blur(80px)",
+              filter: "blur(100px)",
+              animation: "gradientFlow 15s ease infinite",
+              backgroundSize: "200% 200%",
             }}
           />
 
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundImage: `
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)
-              `,
-              backgroundSize: "50px 50px",
-              opacity: 0.3,
-            }}
-          />
-
-          <div
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              right: 0,
-              height: 200,
-              background: "linear-gradient(to top, rgba(0, 16, 233, 0.1), transparent)",
-              opacity: 0.5,
-            }}
-          />
-
+          {/* Content */}
           <div
             style={{
               width: "100%",
               maxWidth: 1400,
-              padding: "40px",
+              padding: "60px 40px",
               display: "flex",
-              flexDirection: width > 1024 ? "row" : "column",
+              flexDirection: width > 1200 ? "row" : "column",
               alignItems: "center",
               justifyContent: "space-between",
-              gap: width > 1024 ? 80 : 60,
+              gap: width > 1200 ? 100 : 80,
               position: "relative",
               zIndex: 2,
             }}
           >
+
+
+            {/* Specs Section */}
             <div
               style={{
-                width: "100%",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <div
-                style={{
-                  position: "relative",
-                  width: "100%",
-                  maxWidth: 800,
-                  height: width > 768 ? 600 : 400,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <div
-                  style={{
-                    position: "absolute",
-                    width: "100%",
-                    height: "100%",
-                    filter: "blur(40px)",
-                    animation: "pulse 4s ease-in-out infinite",
-                  }}
-                />
-
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    height: "100%",
-                    transition: "transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)",
-                  }}
-                >
-                  <Img
-                    src={data.images.img1}
-                    style={{
-                      // width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      borderRadius: 40,
-                      boxShadow: `
-                        0 60px 120px rgba(0, 16, 233, 0.4),
-                        0 30px 80px rgba(0, 0, 0, 0.8),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.1)
-                      `,
-                      border: "2px solid rgba(255, 255, 255, 0.1)",
-                    }}
-                  />
-
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      background: "linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.05) 50%, transparent 60%)",
-                      borderRadius: 40,
-                      pointerEvents: "none",
-                    }}
-                  />
-                </div>
-              </div>
-
-              <div
-                style={{
-                  marginTop: 40,
-                  padding: "16px 32px",
-                  backgroundColor: "rgba(255, 255, 255, 0.05)",
-                  borderRadius: 24,
-                  border: "1px solid rgba(255, 255, 255, 0.1)",
-                  backdropFilter: "blur(20px)",
-                  textAlign: "center",
-                  transform: `translateY(${layer2Y}px)`,
-                  transition: "transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)",
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: width > 768 ? 18 : 16,
-                    color: "rgba(255, 255, 255, 0.7)",
-                    fontWeight: 500,
-                    margin: 0,
-                    letterSpacing: "0.05em",
-                  }}
-                >
-                  Music Playing: ezoix.com Nation anthem
-                </p>
-              </div>
-            </div>
-
-            <div
-              style={{
-                width: width > 1024 ? "45%" : "100%",
+                width: width > 1200 ? "100%" : "100%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                gap: 40,
+                gap: 50,
               }}
             >
+              {/* Header */}
               <div
                 style={{
                   transform: `translateY(${layer1Y}px)`,
-                  transition: "transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                  transition: "transform 1s cubic-bezier(0.34, 1.56, 0.64, 1)",
                 }}
               >
                 <div
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
-                    backgroundColor: "rgba(0, 16, 233, 0.15)",
-                    padding: "12px 24px",
-                    borderRadius: 24,
-                    border: "1px solid rgba(0, 16, 233, 0.3)",
-                    marginBottom: 20,
-                    backdropFilter: "blur(10px)",
+                    background: "linear-gradient(135deg, rgba(0, 16, 233, 0.2), rgba(108, 99, 255, 0.15))",
+                    padding: "14px 28px",
+                    borderRadius: 28,
+                    border: "1px solid rgba(0, 16, 233, 0.4)",
+                    backdropFilter: "blur(20px)",
+                    marginBottom: 24,
                   }}
                 >
                   <span
                     style={{
-                      fontSize: 14,
+                      fontSize: 16,
                       fontWeight: 700,
                       color: "#0010e9",
-                      letterSpacing: "0.1em",
+                      letterSpacing: "0.15em",
                       textTransform: "uppercase",
                     }}
                   >
-                    Detailed specs
+                    Complete Specifications
                   </span>
                 </div>
 
                 <h1
                   style={{
-                    fontSize: width > 768 ? 56 : 48,
-                    fontWeight: 800,
-                    color: "#ffffff",
-                    margin: "0 0 16px 0",
-                    lineHeight: 1.1,
+                    fontSize: width > 768 ? 64 : 52,
+                    fontWeight: 900,
                     background: "linear-gradient(135deg, #ffffff 0%, #0010e9 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
+                    margin: "0 0 20px 0",
+                    lineHeight: 1.1,
                   }}
                 >
                   {data.model}
@@ -654,86 +889,101 @@ export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.j
 
                 <p
                   style={{
-                    fontSize: width > 768 ? 20 : 18,
-                    color: "rgba(255, 255, 255, 0.7)",
-                    lineHeight: 1.6,
-                    maxWidth: 500,
+                    fontSize: width > 768 ? 22 : 18,
+                    color: "rgba(255, 255, 255, 0.8)",
+                    lineHeight: 1.7,
+                    maxWidth: 600,
+                    fontWeight: 400,
                   }}
                 >
-                  Discover cutting-edge technology, trusted reviews, and smart insights—only on ezoix.com.
+                  Discover cutting-edge technology, expert reviews, and smart insights—only on ezoix.com.
                 </p>
               </div>
 
+              {/* Specs Grid */}
               <div
                 style={{
                   transform: `translateY(${layer3Y}px)`,
-                  transition: "transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                  transition: "transform 1s cubic-bezier(0.34, 1.56, 0.64, 1)",
                 }}
               >
                 <div
                   style={{
                     display: "grid",
                     gridTemplateColumns: width > 768 ? "repeat(2, 1fr)" : "1fr",
-                    gap: 16,
-                    marginBottom: 40,
+                    gap: 20,
+                    marginBottom: 50,
                   }}
                 >
-                  {data.features?.slice(0, 4).map((feature: any, index: number) => (
+                  {(data.features || data.specs || []).slice(0, 6).map((feature: any, index: number) => (
                     <div
                       key={index}
                       style={{
                         display: "flex",
                         alignItems: "center",
-                        gap: 12,
-                        padding: "16px 20px",
-                        backgroundColor: "rgba(255, 255, 255, 0.03)",
-                        borderRadius: 16,
-                        border: "1px solid rgba(255, 255, 255, 0.05)",
-                        backdropFilter: "blur(10px)",
+                        gap: 16,
+                        padding: "20px 24px",
+                        background: "rgba(255, 255, 255, 0.05)",
+                        borderRadius: 20,
+                        border: "1px solid rgba(255, 255, 255, 0.1)",
+                        backdropFilter: "blur(15px)",
+                        transition: "all 0.3s ease",
+                        transform: "translateY(0)",
+                        cursor: "pointer",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "translateY(-5px)";
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
+                        e.currentTarget.style.border = "1px solid rgba(0, 16, 233, 0.3)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.05)";
+                        e.currentTarget.style.border = "1px solid rgba(255, 255, 255, 0.1)";
                       }}
                     >
                       <div
                         style={{
-                          width: 32,
-                          height: 32,
+                          width: 40,
+                          height: 40,
                           borderRadius: "50%",
                           background: "linear-gradient(135deg, #0010e9, #6C63FF)",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
                           flexShrink: 0,
+                          boxShadow: "0 4px 20px rgba(0, 16, 233, 0.4)",
                         }}
                       >
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                          <path d="M13 4L6.5 10.5L4 8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                          <path d="M20 6L9 17L4 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
-                      <span
-                        style={{
-                          fontSize: 16,
-                          color: "#ffffff",
-                          fontWeight: 500,
-                          lineHeight: 1.4,
-                        }}
-                      >
-                        {`${feature.label}: ${feature.value}`}
-                      </span>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ fontSize: 14, color: "rgba(255, 255, 255, 0.6)", marginBottom: 4 }}>
+                          {feature.label}
+                        </div>
+                        <div style={{ fontSize: 18, color: "#ffffff", fontWeight: 600 }}>
+                          {feature.value}
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
 
+              {/* CTA Button */}
               <div
                 style={{
                   transform: `translateY(${layer4Y}px)`,
-                  transition: "transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                  transition: "transform 1s cubic-bezier(0.34, 1.56, 0.64, 1)",
                 }}
               >
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
-                    gap: 20,
+                    gap: 24,
                     alignItems: width > 768 ? "flex-start" : "center",
                   }}
                 >
@@ -748,25 +998,40 @@ export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.j
                   >
                     <div
                       style={{
-                        padding: width > 768 ? "28px 56px" : "24px 48px",
-                        background: "linear-gradient(135deg, #ffffff 0%, #0010e9 100%)",
-                        borderRadius: 20,
+                        padding: width > 768 ? "32px 64px" : "28px 56px",
+                        background: "linear-gradient(135deg, #0010e9 0%, #6C63FF 100%)",
+                        borderRadius: 24,
                         fontWeight: 800,
-                        color: "#0b0b0f",
-                        fontSize: width > 768 ? 24 : 20,
+                        color: "#ffffff",
+                        fontSize: width > 768 ? 26 : 22,
                         cursor: "pointer",
                         boxShadow: `
-                          0 20px 60px rgba(0, 16, 233, 0.5),
-                          0 8px 30px rgba(255, 255, 255, 0.1)
+                          0 25px 80px rgba(0, 16, 233, 0.6),
+                          0 12px 40px rgba(255, 255, 255, 0.15)
                         `,
-                        transform: `scale(${0.9 + button1Spring * 0.1})`,
-                        transition: "all 0.3s ease",
+                        transform: `scale(${0.95 + button1Spring * 0.1})`,
+                        transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                         textAlign: "center",
-                        minWidth: width > 768 ? 300 : 250,
+                        minWidth: width > 768 ? 350 : 280,
                         position: "relative",
                         overflow: "hidden",
                       }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.05)";
+                        e.currentTarget.style.boxShadow = `
+                          0 35px 100px rgba(0, 16, 233, 0.8),
+                          0 15px 50px rgba(255, 255, 255, 0.2)
+                        `;
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = `scale(${0.95 + button1Spring * 0.1})`;
+                        e.currentTarget.style.boxShadow = `
+                          0 25px 80px rgba(0, 16, 233, 0.6),
+                          0 12px 40px rgba(255, 255, 255, 0.15)
+                        `;
+                      }}
                     >
+                      {/* Shimmer effect */}
                       <div
                         style={{
                           position: "absolute",
@@ -774,66 +1039,66 @@ export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.j
                           left: 0,
                           right: 0,
                           bottom: 0,
-                          background: "linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.2) 50%, transparent 60%)",
-                          opacity: 0.5,
+                          background: "linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.3) 50%, transparent 60%)",
+                          opacity: 0.6,
+                          animation: "shimmer 3s infinite linear",
                         }}
                       />
 
-                      <span style={{ position: "relative", zIndex: 1 }}>
+                      <span style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: 12 }}>
                         Learn More at ezoix.com
+                        <svg
+                          width="28"
+                          height="28"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          style={{
+                            transition: "transform 0.3s ease",
+                          }}
+                        >
+                          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
                       </span>
-
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        style={{
-                          marginLeft: 12,
-                          display: "inline-block",
-                          verticalAlign: "middle",
-                          position: "relative",
-                          zIndex: 1,
-                        }}
-                      >
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#0b0b0f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
                     </div>
                   </a>
 
+                  {/* Tagline */}
                   <div
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      gap: 8,
-                      padding: "12px 20px",
-                      backgroundColor: "rgba(255, 255, 255, 0.03)",
-                      borderRadius: 12,
-                      border: "1px solid rgba(255, 255, 255, 0.05)",
+                      gap: 12,
+                      padding: "16px 24px",
+                      background: "rgba(255, 255, 255, 0.05)",
+                      borderRadius: 16,
+                      border: "1px solid rgba(255, 255, 255, 0.1)",
+                      backdropFilter: "blur(10px)",
                     }}
                   >
                     <div
                       style={{
-                        width: 24,
-                        height: 24,
+                        width: 28,
+                        height: 28,
                         borderRadius: "50%",
                         background: "linear-gradient(135deg, #0010e9, #6C63FF)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
+                        boxShadow: "0 0 20px rgba(0, 16, 233, 0.5)",
                       }}
                     >
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                         <path d="M12 3V12L16 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
                     <span
                       style={{
-                        fontSize: 14,
-                        color: "rgba(255, 255, 255, 0.6)",
+                        fontSize: 16,
+                        color: "rgba(255, 255, 255, 0.7)",
+                        fontWeight: 500,
                       }}
                     >
-                      where everything is a tech
+                      Where technology meets innovation
                     </span>
                   </div>
                 </div>
@@ -841,53 +1106,25 @@ export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.j
             </div>
           </div>
 
-          {[1, 2, 3, 4, 5].map((i) => (
+          {/* Floating particles */}
+          {[1, 2, 3, 4, 5, 6].map((i) => (
             <div
               key={i}
               style={{
                 position: "absolute",
-                width: i * 20,
-                height: i * 20,
+                width: i * 30,
+                height: i * 30,
                 borderRadius: "50%",
-                background: `radial-gradient(circle, rgba(${0 + i * 20}, ${16 + i * 10}, ${233 + i * 5}, ${0.03 + i * 0.01}) 0%, transparent 70%)`,
-                top: `${15 + i * 15}%`,
-                left: `${10 + i * 5}%`,
-                filter: "blur(15px)",
-                animation: `float ${10 + i * 2}s ease-in-out infinite`,
+                background: `radial-gradient(circle, rgba(${0 + i * 15}, ${16 + i * 8}, ${233 + i * 4}, ${0.05 + i * 0.02}) 0%, transparent 70%)`,
+                top: `${10 + i * 10}%`,
+                left: `${5 + i * 10}%`,
+                filter: "blur(20px)",
+                animation: `float ${12 + i * 3}s ease-in-out infinite`,
                 animationDelay: `${i}s`,
                 zIndex: 1,
               }}
             />
           ))}
-
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              overflow: "hidden",
-              pointerEvents: "none",
-            }}
-          >
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                style={{
-                  position: "absolute",
-                  width: "200%",
-                  height: `${2 + i}px`,
-                  background: `linear-gradient(90deg, transparent, rgba(0, 16, 233, ${0.2 + i * 0.1}), transparent)`,
-                  top: `${20 + i * 20}%`,
-                  left: "-50%",
-                  transform: `rotate(${15 + i * 10}deg)`,
-                  animation: `slide ${15 + i * 5}s linear infinite`,
-                  animationDelay: `${i * 2}s`,
-                }}
-              />
-            ))}
-          </div>
         </AbsoluteFill>
       </Sequence>
     </AbsoluteFill>

@@ -14,7 +14,7 @@ const sampleTimeline = [
 
 // 🔑 Constants
 const FPS = 30;
-const OUTRO_SECONDS = 10;
+const OUTRO_SECONDS = 18;
 
 export const Root: React.FC = () => {
   return (
