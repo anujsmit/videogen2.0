@@ -5,13 +5,15 @@
  * 3. Distributes timing proportionally across the original word timeline.
  */
 
-const fs = require("fs-extra");
-const path = require("path");
-const gTTS = require("gtts");
-const ffmpeg = require("fluent-ffmpeg");
-const ffmpegPath = require("ffmpeg-static");
+// FIX: Convert CJS requires to ESM imports
+import fs from "fs-extra";
+import path from "path";
+import gTTS from "gtts";
+import ffmpeg from "fluent-ffmpeg";
+import ffmpegStatic from "ffmpeg-static"; // Renamed for clarity in import
 
-ffmpeg.setFfmpegPath(ffmpegPath);
+// Set ffmpeg path using the imported module
+ffmpeg.setFfmpegPath(ffmpegStatic);
 
 const TIMELINE_DIR = path.join(process.cwd(), "src", "data", "timelines");
 const PUBLIC_DIR = path.join(process.cwd(), "public");

@@ -1,5 +1,9 @@
-const fs = require("fs-extra");
-const path = require("path");
+import fs from "fs-extra";
+import path from "path";
+import { createRequire } from 'module';
+
+// Use createRequire to synchronously load the CommonJS file '../../data/device'
+const require = createRequire(import.meta.url);
 const { devices } = require("../../data/device");
 
 const OUTPUT_DIR = path.join(process.cwd(), "src", "data", "timelines");

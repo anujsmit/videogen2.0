@@ -1412,11 +1412,1773 @@
       "duration": 0.21348837209302327
     }
   ],
-  "totalDuration": 84.58,
+  "phrases": [
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "The",
+          "start": 0,
+          "end": 0.2349090909090909,
+          "punctuation": "",
+          "duration": 0.2349090909090909
+        },
+        {
+          "type": "word",
+          "text": "Apple",
+          "start": 0.2349090909090909,
+          "end": 0.6264242424242423,
+          "punctuation": "",
+          "duration": 0.3915151515151515
+        },
+        {
+          "type": "word",
+          "text": "iPhone",
+          "start": 0.6264242424242423,
+          "end": 1.096242424242424,
+          "punctuation": "",
+          "duration": 0.4698181818181818
+        },
+        {
+          "type": "word",
+          "text": "17",
+          "start": 1.096242424242424,
+          "end": 1.2528484848484847,
+          "punctuation": "",
+          "duration": 0.1566060606060606
+        },
+        {
+          "type": "word",
+          "text": "Pro",
+          "start": 1.2528484848484847,
+          "end": 1.4877575757575756,
+          "punctuation": "",
+          "duration": 0.2349090909090909
+        }
+      ],
+      "start": 0,
+      "end": 1.4877575757575756,
+      "text": "The Apple iPhone 17 Pro",
+      "duration": 1.4877575757575756
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "is",
+          "start": 1.4877575757575756,
+          "end": 1.6443636363636362,
+          "punctuation": "",
+          "duration": 0.1566060606060606
+        },
+        {
+          "type": "word",
+          "text": "designed",
+          "start": 1.6443636363636362,
+          "end": 2.270787878787879,
+          "punctuation": "",
+          "duration": 0.6264242424242424
+        },
+        {
+          "type": "word",
+          "text": "for",
+          "start": 2.270787878787879,
+          "end": 2.5056969696969698,
+          "punctuation": "",
+          "duration": 0.2349090909090909
+        },
+        {
+          "type": "word",
+          "text": "users",
+          "start": 2.5056969696969698,
+          "end": 2.8972121212121213,
+          "punctuation": "",
+          "duration": 0.3915151515151515
+        },
+        {
+          "type": "word",
+          "text": "who",
+          "start": 2.8972121212121213,
+          "end": 3.1321212121212123,
+          "punctuation": "",
+          "duration": 0.2349090909090909
+        }
+      ],
+      "start": 1.4877575757575756,
+      "end": 3.1321212121212123,
+      "text": "is designed for users who",
+      "duration": 1.6443636363636367
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "want",
+          "start": 3.1321212121212123,
+          "end": 3.4453333333333336,
+          "punctuation": "",
+          "duration": 0.3132121212121212
+        },
+        {
+          "type": "word",
+          "text": "a",
+          "start": 3.4453333333333336,
+          "end": 3.523636363636364,
+          "punctuation": "",
+          "duration": 0.0783030303030303
+        },
+        {
+          "type": "word",
+          "text": "smooth",
+          "start": 3.523636363636364,
+          "end": 3.993454545454546,
+          "punctuation": "",
+          "duration": 0.4698181818181818
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 3.993454545454546,
+          "end": 4.228363636363636,
+          "punctuation": "",
+          "duration": 0.2349090909090909
+        },
+        {
+          "type": "word",
+          "text": "reliable",
+          "start": 4.228363636363636,
+          "end": 4.854787878787879,
+          "punctuation": "",
+          "duration": 0.6264242424242424
+        }
+      ],
+      "start": 3.1321212121212123,
+      "end": 4.854787878787879,
+      "text": "want a smooth and reliable",
+      "duration": 1.7226666666666666
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "smartphone",
+          "start": 4.854787878787879,
+          "end": 5.637818181818182,
+          "punctuation": "",
+          "duration": 0.783030303030303
+        },
+        {
+          "type": "word",
+          "text": "experience",
+          "start": 5.637818181818182,
+          "end": 6.420848484848485,
+          "punctuation": ".",
+          "duration": 0.783030303030303
+        }
+      ],
+      "start": 4.854787878787879,
+      "end": 6.420848484848485,
+      "text": "smartphone experience.",
+      "duration": 1.5660606060606064
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "It",
+          "start": 7.752,
+          "end": 7.992,
+          "punctuation": "",
+          "duration": 0.24
+        },
+        {
+          "type": "word",
+          "text": "features",
+          "start": 7.992,
+          "end": 8.952,
+          "punctuation": "",
+          "duration": 0.96
+        },
+        {
+          "type": "word",
+          "text": "a",
+          "start": 8.952,
+          "end": 9.072,
+          "punctuation": "",
+          "duration": 0.12
+        },
+        {
+          "type": "word",
+          "text": "6",
+          "start": 9.072,
+          "end": 9.191999999999998,
+          "punctuation": ".",
+          "duration": 0.12
+        }
+      ],
+      "start": 7.752,
+      "end": 9.191999999999998,
+      "text": "It features a 6.",
+      "duration": 1.4399999999999986
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "3",
+          "start": 9.672,
+          "end": 9.74441379310345,
+          "punctuation": "",
+          "duration": 0.07241379310344828
+        },
+        {
+          "type": "word",
+          "text": "inch",
+          "start": 9.74441379310345,
+          "end": 10.034068965517243,
+          "punctuation": "",
+          "duration": 0.2896551724137931
+        },
+        {
+          "type": "word",
+          "text": "Super",
+          "start": 10.034068965517243,
+          "end": 10.396137931034485,
+          "punctuation": "",
+          "duration": 0.36206896551724144
+        },
+        {
+          "type": "word",
+          "text": "Retina",
+          "start": 10.396137931034485,
+          "end": 10.830620689655174,
+          "punctuation": "",
+          "duration": 0.4344827586206897
+        },
+        {
+          "type": "word",
+          "text": "display",
+          "start": 10.830620689655174,
+          "end": 11.337517241379311,
+          "punctuation": "",
+          "duration": 0.506896551724138
+        }
+      ],
+      "start": 9.672,
+      "end": 11.337517241379311,
+      "text": "3 inch Super Retina display",
+      "duration": 1.6655172413793107
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "that",
+          "start": 11.337517241379311,
+          "end": 11.627172413793105,
+          "punctuation": "",
+          "duration": 0.2896551724137931
+        },
+        {
+          "type": "word",
+          "text": "looks",
+          "start": 11.627172413793105,
+          "end": 11.989241379310347,
+          "punctuation": "",
+          "duration": 0.36206896551724144
+        },
+        {
+          "type": "word",
+          "text": "sharp",
+          "start": 11.989241379310347,
+          "end": 12.351310344827588,
+          "punctuation": "",
+          "duration": 0.36206896551724144
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 12.351310344827588,
+          "end": 12.568551724137933,
+          "punctuation": "",
+          "duration": 0.21724137931034485
+        },
+        {
+          "type": "word",
+          "text": "colorful",
+          "start": 12.568551724137933,
+          "end": 13.14786206896552,
+          "punctuation": ".",
+          "duration": 0.5793103448275863
+        }
+      ],
+      "start": 11.337517241379311,
+      "end": 13.14786206896552,
+      "text": "that looks sharp and colorful.",
+      "duration": 1.8103448275862082
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Scrolling",
+          "start": 13.872,
+          "end": 14.578153846153846,
+          "punctuation": "",
+          "duration": 0.7061538461538461
+        },
+        {
+          "type": "word",
+          "text": "feels",
+          "start": 14.578153846153846,
+          "end": 14.970461538461539,
+          "punctuation": "",
+          "duration": 0.39230769230769236
+        },
+        {
+          "type": "word",
+          "text": "smooth",
+          "start": 14.970461538461539,
+          "end": 15.441230769230769,
+          "punctuation": "",
+          "duration": 0.47076923076923083
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 15.441230769230769,
+          "end": 15.676615384615385,
+          "punctuation": "",
+          "duration": 0.23538461538461541
+        },
+        {
+          "type": "word",
+          "text": "videos",
+          "start": 15.676615384615385,
+          "end": 16.147384615384617,
+          "punctuation": "",
+          "duration": 0.47076923076923083
+        }
+      ],
+      "start": 13.872,
+      "end": 16.147384615384617,
+      "text": "Scrolling feels smooth and videos",
+      "duration": 2.275384615384617
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "look",
+          "start": 16.147384615384617,
+          "end": 16.46123076923077,
+          "punctuation": "",
+          "duration": 0.3138461538461539
+        },
+        {
+          "type": "word",
+          "text": "very",
+          "start": 16.46123076923077,
+          "end": 16.775076923076924,
+          "punctuation": "",
+          "duration": 0.3138461538461539
+        },
+        {
+          "type": "word",
+          "text": "natural",
+          "start": 16.775076923076924,
+          "end": 17.32430769230769,
+          "punctuation": ".",
+          "duration": 0.5492307692307692
+        }
+      ],
+      "start": 16.147384615384617,
+      "end": 17.32430769230769,
+      "text": "look very natural.",
+      "duration": 1.1769230769230745
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "The",
+          "start": 17.951999999999998,
+          "end": 18.165714285714284,
+          "punctuation": "",
+          "duration": 0.21371428571428572
+        },
+        {
+          "type": "word",
+          "text": "phone",
+          "start": 18.165714285714284,
+          "end": 18.52190476190476,
+          "punctuation": "",
+          "duration": 0.3561904761904762
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 18.52190476190476,
+          "end": 18.664380952380952,
+          "punctuation": "",
+          "duration": 0.14247619047619048
+        },
+        {
+          "type": "word",
+          "text": "comfortable",
+          "start": 18.664380952380952,
+          "end": 19.448,
+          "punctuation": "",
+          "duration": 0.7836190476190477
+        },
+        {
+          "type": "word",
+          "text": "to",
+          "start": 19.448,
+          "end": 19.590476190476192,
+          "punctuation": "",
+          "duration": 0.14247619047619048
+        }
+      ],
+      "start": 17.951999999999998,
+      "end": 19.590476190476192,
+      "text": "The phone is comfortable to",
+      "duration": 1.6384761904761938
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "hold",
+          "start": 19.590476190476192,
+          "end": 19.87542857142857,
+          "punctuation": "",
+          "duration": 0.28495238095238096
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 19.87542857142857,
+          "end": 20.089142857142857,
+          "punctuation": "",
+          "duration": 0.21371428571428572
+        },
+        {
+          "type": "word",
+          "text": "easy",
+          "start": 20.089142857142857,
+          "end": 20.374095238095236,
+          "punctuation": "",
+          "duration": 0.28495238095238096
+        },
+        {
+          "type": "word",
+          "text": "to",
+          "start": 20.374095238095236,
+          "end": 20.516571428571428,
+          "punctuation": "",
+          "duration": 0.14247619047619048
+        },
+        {
+          "type": "word",
+          "text": "use",
+          "start": 20.516571428571428,
+          "end": 20.730285714285714,
+          "punctuation": "",
+          "duration": 0.21371428571428572
+        }
+      ],
+      "start": 19.590476190476192,
+      "end": 20.730285714285714,
+      "text": "hold and easy to use",
+      "duration": 1.1398095238095216
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "with",
+          "start": 20.730285714285714,
+          "end": 21.015238095238093,
+          "punctuation": "",
+          "duration": 0.28495238095238096
+        },
+        {
+          "type": "word",
+          "text": "one",
+          "start": 21.015238095238093,
+          "end": 21.22895238095238,
+          "punctuation": "",
+          "duration": 0.21371428571428572
+        },
+        {
+          "type": "word",
+          "text": "hand",
+          "start": 21.22895238095238,
+          "end": 21.513904761904758,
+          "punctuation": ".",
+          "duration": 0.28495238095238096
+        }
+      ],
+      "start": 20.730285714285714,
+      "end": 21.513904761904758,
+      "text": "with one hand.",
+      "duration": 0.7836190476190446
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Performance",
+          "start": 22.439999999999998,
+          "end": 23.319999999999997,
+          "punctuation": "",
+          "duration": 0.88
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 23.319999999999997,
+          "end": 23.479999999999997,
+          "punctuation": "",
+          "duration": 0.15999999999999998
+        },
+        {
+          "type": "word",
+          "text": "powered",
+          "start": 23.479999999999997,
+          "end": 24.039999999999996,
+          "punctuation": "",
+          "duration": 0.5599999999999999
+        },
+        {
+          "type": "word",
+          "text": "by",
+          "start": 24.039999999999996,
+          "end": 24.199999999999996,
+          "punctuation": "",
+          "duration": 0.15999999999999998
+        },
+        {
+          "type": "word",
+          "text": "the",
+          "start": 24.199999999999996,
+          "end": 24.439999999999994,
+          "punctuation": "",
+          "duration": 0.24
+        }
+      ],
+      "start": 22.439999999999998,
+      "end": 24.439999999999994,
+      "text": "Performance is powered by the",
+      "duration": 1.9999999999999964
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "A19",
+          "start": 24.439999999999994,
+          "end": 24.679999999999993,
+          "punctuation": "",
+          "duration": 0.24
+        },
+        {
+          "type": "word",
+          "text": "Pro",
+          "start": 24.679999999999993,
+          "end": 24.91999999999999,
+          "punctuation": "",
+          "duration": 0.24
+        },
+        {
+          "type": "word",
+          "text": "chip",
+          "start": 24.91999999999999,
+          "end": 25.23999999999999,
+          "punctuation": ",",
+          "duration": 0.31999999999999995
+        }
+      ],
+      "start": 24.439999999999994,
+      "end": 25.23999999999999,
+      "text": "A19 Pro chip,",
+      "duration": 0.7999999999999972
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "which",
+          "start": 25.23999999999999,
+          "end": 25.63999999999999,
+          "punctuation": "",
+          "duration": 0.4
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 25.63999999999999,
+          "end": 25.79999999999999,
+          "punctuation": "",
+          "duration": 0.15999999999999998
+        },
+        {
+          "type": "word",
+          "text": "fast",
+          "start": 25.79999999999999,
+          "end": 26.11999999999999,
+          "punctuation": "",
+          "duration": 0.31999999999999995
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 26.11999999999999,
+          "end": 26.35999999999999,
+          "punctuation": "",
+          "duration": 0.24
+        },
+        {
+          "type": "word",
+          "text": "efficient",
+          "start": 26.35999999999999,
+          "end": 27.079999999999988,
+          "punctuation": ".",
+          "duration": 0.72
+        }
+      ],
+      "start": 25.23999999999999,
+      "end": 27.079999999999988,
+      "text": "which is fast and efficient.",
+      "duration": 1.8399999999999963
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Apps",
+          "start": 28.199999999999996,
+          "end": 28.509152542372878,
+          "punctuation": "",
+          "duration": 0.3091525423728813
+        },
+        {
+          "type": "word",
+          "text": "open",
+          "start": 28.509152542372878,
+          "end": 28.81830508474576,
+          "punctuation": "",
+          "duration": 0.3091525423728813
+        },
+        {
+          "type": "word",
+          "text": "instantly",
+          "start": 28.81830508474576,
+          "end": 29.51389830508474,
+          "punctuation": "",
+          "duration": 0.6955932203389831
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 29.51389830508474,
+          "end": 29.7457627118644,
+          "punctuation": "",
+          "duration": 0.23186440677966103
+        },
+        {
+          "type": "word",
+          "text": "performance",
+          "start": 29.7457627118644,
+          "end": 30.595932203389825,
+          "punctuation": "",
+          "duration": 0.8501694915254236
+        }
+      ],
+      "start": 28.199999999999996,
+      "end": 30.595932203389825,
+      "text": "Apps open instantly and performance",
+      "duration": 2.3959322033898296
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "stays",
+          "start": 30.595932203389825,
+          "end": 30.98237288135593,
+          "punctuation": "",
+          "duration": 0.38644067796610165
+        },
+        {
+          "type": "word",
+          "text": "stable",
+          "start": 30.98237288135593,
+          "end": 31.44610169491525,
+          "punctuation": "",
+          "duration": 0.46372881355932205
+        },
+        {
+          "type": "word",
+          "text": "over",
+          "start": 31.44610169491525,
+          "end": 31.75525423728813,
+          "punctuation": "",
+          "duration": 0.3091525423728813
+        },
+        {
+          "type": "word",
+          "text": "time",
+          "start": 31.75525423728813,
+          "end": 32.06440677966101,
+          "punctuation": ".",
+          "duration": 0.3091525423728813
+        }
+      ],
+      "start": 30.595932203389825,
+      "end": 32.06440677966101,
+      "text": "stays stable over time.",
+      "duration": 1.4684745762711877
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Gaming",
+          "start": 32.76,
+          "end": 33.254999999999995,
+          "punctuation": "",
+          "duration": 0.495
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 33.254999999999995,
+          "end": 33.5025,
+          "punctuation": "",
+          "duration": 0.2475
+        },
+        {
+          "type": "word",
+          "text": "daily",
+          "start": 33.5025,
+          "end": 33.915,
+          "punctuation": "",
+          "duration": 0.41250000000000003
+        },
+        {
+          "type": "word",
+          "text": "tasks",
+          "start": 33.915,
+          "end": 34.3275,
+          "punctuation": "",
+          "duration": 0.41250000000000003
+        },
+        {
+          "type": "word",
+          "text": "run",
+          "start": 34.3275,
+          "end": 34.575,
+          "punctuation": "",
+          "duration": 0.2475
+        }
+      ],
+      "start": 32.76,
+      "end": 34.575,
+      "text": "Gaming and daily tasks run",
+      "duration": 1.8150000000000048
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "without",
+          "start": 34.575,
+          "end": 35.1525,
+          "punctuation": "",
+          "duration": 0.5775
+        },
+        {
+          "type": "word",
+          "text": "any",
+          "start": 35.1525,
+          "end": 35.400000000000006,
+          "punctuation": "",
+          "duration": 0.2475
+        },
+        {
+          "type": "word",
+          "text": "problems",
+          "start": 35.400000000000006,
+          "end": 36.06,
+          "punctuation": ".",
+          "duration": 0.6599999999999999
+        }
+      ],
+      "start": 34.575,
+      "end": 36.06,
+      "text": "without any problems.",
+      "duration": 1.4849999999999994
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "The",
+          "start": 36.72,
+          "end": 36.98659459459459,
+          "punctuation": "",
+          "duration": 0.2665945945945946
+        },
+        {
+          "type": "word",
+          "text": "camera",
+          "start": 36.98659459459459,
+          "end": 37.51978378378378,
+          "punctuation": "",
+          "duration": 0.5331891891891892
+        },
+        {
+          "type": "word",
+          "text": "system",
+          "start": 37.51978378378378,
+          "end": 38.05297297297297,
+          "punctuation": "",
+          "duration": 0.5331891891891892
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 38.05297297297297,
+          "end": 38.23070270270269,
+          "punctuation": "",
+          "duration": 0.17772972972972972
+        },
+        {
+          "type": "word",
+          "text": "very",
+          "start": 38.23070270270269,
+          "end": 38.586162162162154,
+          "punctuation": "",
+          "duration": 0.35545945945945945
+        }
+      ],
+      "start": 36.72,
+      "end": 38.586162162162154,
+      "text": "The camera system is very",
+      "duration": 1.866162162162155
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "consistent",
+          "start": 38.586162162162154,
+          "end": 39.4748108108108,
+          "punctuation": ".",
+          "duration": 0.8886486486486487
+        }
+      ],
+      "start": 38.586162162162154,
+      "end": 39.4748108108108,
+      "text": "consistent.",
+      "duration": 0.8886486486486476
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Photos",
+          "start": 40.007999999999996,
+          "end": 40.48917073170731,
+          "punctuation": "",
+          "duration": 0.481170731707317
+        },
+        {
+          "type": "word",
+          "text": "look",
+          "start": 40.48917073170731,
+          "end": 40.809951219512186,
+          "punctuation": "",
+          "duration": 0.32078048780487806
+        },
+        {
+          "type": "word",
+          "text": "natural",
+          "start": 40.809951219512186,
+          "end": 41.37131707317072,
+          "punctuation": "",
+          "duration": 0.5613658536585366
+        },
+        {
+          "type": "word",
+          "text": "with",
+          "start": 41.37131707317072,
+          "end": 41.6920975609756,
+          "punctuation": "",
+          "duration": 0.32078048780487806
+        },
+        {
+          "type": "word",
+          "text": "accurate",
+          "start": 41.6920975609756,
+          "end": 42.333658536585354,
+          "punctuation": "",
+          "duration": 0.6415609756097561
+        }
+      ],
+      "start": 40.007999999999996,
+      "end": 42.333658536585354,
+      "text": "Photos look natural with accurate",
+      "duration": 2.325658536585358
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "colors",
+          "start": 42.333658536585354,
+          "end": 42.81482926829267,
+          "punctuation": ".",
+          "duration": 0.481170731707317
+        }
+      ],
+      "start": 42.333658536585354,
+      "end": 42.81482926829267,
+      "text": "colors.",
+      "duration": 0.4811707317073157
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "All",
+          "start": 43.29599999999999,
+          "end": 43.52543999999999,
+          "punctuation": "",
+          "duration": 0.22944
+        },
+        {
+          "type": "word",
+          "text": "lenses",
+          "start": 43.52543999999999,
+          "end": 43.98431999999999,
+          "punctuation": "",
+          "duration": 0.45888
+        },
+        {
+          "type": "word",
+          "text": "work",
+          "start": 43.98431999999999,
+          "end": 44.29023999999999,
+          "punctuation": "",
+          "duration": 0.30592
+        },
+        {
+          "type": "word",
+          "text": "well",
+          "start": 44.29023999999999,
+          "end": 44.59615999999999,
+          "punctuation": "",
+          "duration": 0.30592
+        },
+        {
+          "type": "word",
+          "text": "together",
+          "start": 44.59615999999999,
+          "end": 45.20799999999999,
+          "punctuation": ",",
+          "duration": 0.61184
+        }
+      ],
+      "start": 43.29599999999999,
+      "end": 45.20799999999999,
+      "text": "All lenses work well together,",
+      "duration": 1.911999999999999
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "making",
+          "start": 45.20799999999999,
+          "end": 45.66687999999999,
+          "punctuation": "",
+          "duration": 0.45888
+        },
+        {
+          "type": "word",
+          "text": "it",
+          "start": 45.66687999999999,
+          "end": 45.81983999999999,
+          "punctuation": "",
+          "duration": 0.15296
+        },
+        {
+          "type": "word",
+          "text": "easy",
+          "start": 45.81983999999999,
+          "end": 46.12575999999999,
+          "punctuation": "",
+          "duration": 0.30592
+        },
+        {
+          "type": "word",
+          "text": "to",
+          "start": 46.12575999999999,
+          "end": 46.27871999999999,
+          "punctuation": "",
+          "duration": 0.15296
+        },
+        {
+          "type": "word",
+          "text": "capture",
+          "start": 46.27871999999999,
+          "end": 46.81407999999999,
+          "punctuation": "",
+          "duration": 0.53536
+        }
+      ],
+      "start": 45.20799999999999,
+      "end": 46.81407999999999,
+      "text": "making it easy to capture",
+      "duration": 1.6060799999999986
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "photos",
+          "start": 46.81407999999999,
+          "end": 47.27295999999999,
+          "punctuation": "",
+          "duration": 0.45888
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 47.27295999999999,
+          "end": 47.50239999999999,
+          "punctuation": "",
+          "duration": 0.22944
+        },
+        {
+          "type": "word",
+          "text": "videos",
+          "start": 47.50239999999999,
+          "end": 47.96127999999999,
+          "punctuation": ".",
+          "duration": 0.45888
+        }
+      ],
+      "start": 46.81407999999999,
+      "end": 47.96127999999999,
+      "text": "photos and videos.",
+      "duration": 1.147199999999998
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Video",
+          "start": 49.03199999999999,
+          "end": 49.41167213114753,
+          "punctuation": "",
+          "duration": 0.37967213114754095
+        },
+        {
+          "type": "word",
+          "text": "recording",
+          "start": 49.41167213114753,
+          "end": 50.095081967213105,
+          "punctuation": "",
+          "duration": 0.6834098360655737
+        },
+        {
+          "type": "word",
+          "text": "quality",
+          "start": 50.095081967213105,
+          "end": 50.62662295081966,
+          "punctuation": "",
+          "duration": 0.5315409836065573
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 50.62662295081966,
+          "end": 50.778491803278676,
+          "punctuation": "",
+          "duration": 0.15186885245901638
+        },
+        {
+          "type": "word",
+          "text": "one",
+          "start": 50.778491803278676,
+          "end": 51.0062950819672,
+          "punctuation": "",
+          "duration": 0.22780327868852457
+        }
+      ],
+      "start": 49.03199999999999,
+      "end": 51.0062950819672,
+      "text": "Video recording quality is one",
+      "duration": 1.9742950819672132
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "of",
+          "start": 51.0062950819672,
+          "end": 51.15816393442622,
+          "punctuation": "",
+          "duration": 0.15186885245901638
+        },
+        {
+          "type": "word",
+          "text": "the",
+          "start": 51.15816393442622,
+          "end": 51.385967213114746,
+          "punctuation": "",
+          "duration": 0.22780327868852457
+        },
+        {
+          "type": "word",
+          "text": "best",
+          "start": 51.385967213114746,
+          "end": 51.68970491803278,
+          "punctuation": "",
+          "duration": 0.30373770491803276
+        },
+        {
+          "type": "word",
+          "text": "on",
+          "start": 51.68970491803278,
+          "end": 51.8415737704918,
+          "punctuation": "",
+          "duration": 0.15186885245901638
+        },
+        {
+          "type": "word",
+          "text": "any",
+          "start": 51.8415737704918,
+          "end": 52.069377049180325,
+          "punctuation": "",
+          "duration": 0.22780327868852457
+        }
+      ],
+      "start": 51.0062950819672,
+      "end": 52.069377049180325,
+      "text": "of the best on any",
+      "duration": 1.0630819672131224
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "smartphone",
+          "start": 52.069377049180325,
+          "end": 52.828721311475405,
+          "punctuation": ".",
+          "duration": 0.7593442622950819
+        }
+      ],
+      "start": 52.069377049180325,
+      "end": 52.828721311475405,
+      "text": "smartphone.",
+      "duration": 0.7593442622950803
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Battery",
+          "start": 53.66399999999999,
+          "end": 54.17581395348836,
+          "punctuation": "",
+          "duration": 0.5118139534883721
+        },
+        {
+          "type": "word",
+          "text": "efficiency",
+          "start": 54.17581395348836,
+          "end": 54.90697674418603,
+          "punctuation": "",
+          "duration": 0.7311627906976744
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 54.90697674418603,
+          "end": 55.05320930232557,
+          "punctuation": "",
+          "duration": 0.1462325581395349
+        },
+        {
+          "type": "word",
+          "text": "improved",
+          "start": 55.05320930232557,
+          "end": 55.638139534883706,
+          "punctuation": ",",
+          "duration": 0.5849302325581396
+        }
+      ],
+      "start": 53.66399999999999,
+      "end": 55.638139534883706,
+      "text": "Battery efficiency is improved,",
+      "duration": 1.9741395348837187
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "allowing",
+          "start": 55.638139534883706,
+          "end": 56.22306976744184,
+          "punctuation": "",
+          "duration": 0.5849302325581396
+        },
+        {
+          "type": "word",
+          "text": "the",
+          "start": 56.22306976744184,
+          "end": 56.442418604651145,
+          "punctuation": "",
+          "duration": 0.21934883720930234
+        },
+        {
+          "type": "word",
+          "text": "phone",
+          "start": 56.442418604651145,
+          "end": 56.807999999999986,
+          "punctuation": "",
+          "duration": 0.3655813953488372
+        },
+        {
+          "type": "word",
+          "text": "to",
+          "start": 56.807999999999986,
+          "end": 56.95423255813952,
+          "punctuation": "",
+          "duration": 0.1462325581395349
+        },
+        {
+          "type": "word",
+          "text": "last",
+          "start": 56.95423255813952,
+          "end": 57.24669767441859,
+          "punctuation": "",
+          "duration": 0.2924651162790698
+        }
+      ],
+      "start": 55.638139534883706,
+      "end": 57.24669767441859,
+      "text": "allowing the phone to last",
+      "duration": 1.6085581395348854
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "a",
+          "start": 57.24669767441859,
+          "end": 57.31981395348836,
+          "punctuation": "",
+          "duration": 0.07311627906976745
+        },
+        {
+          "type": "word",
+          "text": "full",
+          "start": 57.31981395348836,
+          "end": 57.612279069767425,
+          "punctuation": "",
+          "duration": 0.2924651162790698
+        },
+        {
+          "type": "word",
+          "text": "day",
+          "start": 57.612279069767425,
+          "end": 57.83162790697673,
+          "punctuation": "",
+          "duration": 0.21934883720930234
+        },
+        {
+          "type": "word",
+          "text": "with",
+          "start": 57.83162790697673,
+          "end": 58.124093023255796,
+          "punctuation": "",
+          "duration": 0.2924651162790698
+        },
+        {
+          "type": "word",
+          "text": "normal",
+          "start": 58.124093023255796,
+          "end": 58.5627906976744,
+          "punctuation": "",
+          "duration": 0.4386976744186047
+        }
+      ],
+      "start": 57.24669767441859,
+      "end": 58.5627906976744,
+      "text": "a full day with normal",
+      "duration": 1.3160930232558101
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "use",
+          "start": 58.5627906976744,
+          "end": 58.782139534883704,
+          "punctuation": ".",
+          "duration": 0.21934883720930234
+        }
+      ],
+      "start": 58.5627906976744,
+      "end": 58.782139534883704,
+      "text": "use.",
+      "duration": 0.21934883720930287
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "One",
+          "start": 59.951999999999984,
+          "end": 60.18666666666665,
+          "punctuation": "",
+          "duration": 0.23466666666666666
+        },
+        {
+          "type": "word",
+          "text": "of",
+          "start": 60.18666666666665,
+          "end": 60.3431111111111,
+          "punctuation": "",
+          "duration": 0.15644444444444444
+        },
+        {
+          "type": "word",
+          "text": "the",
+          "start": 60.3431111111111,
+          "end": 60.57777777777777,
+          "punctuation": "",
+          "duration": 0.23466666666666666
+        },
+        {
+          "type": "word",
+          "text": "strongest",
+          "start": 60.57777777777777,
+          "end": 61.28177777777777,
+          "punctuation": "",
+          "duration": 0.704
+        },
+        {
+          "type": "word",
+          "text": "features",
+          "start": 61.28177777777777,
+          "end": 61.90755555555555,
+          "punctuation": "",
+          "duration": 0.6257777777777778
+        }
+      ],
+      "start": 59.951999999999984,
+      "end": 61.90755555555555,
+      "text": "One of the strongest features",
+      "duration": 1.9555555555555628
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "of",
+          "start": 61.90755555555555,
+          "end": 62.06399999999999,
+          "punctuation": "",
+          "duration": 0.15644444444444444
+        },
+        {
+          "type": "word",
+          "text": "the",
+          "start": 62.06399999999999,
+          "end": 62.29866666666666,
+          "punctuation": "",
+          "duration": 0.23466666666666666
+        },
+        {
+          "type": "word",
+          "text": "iPhone",
+          "start": 62.29866666666666,
+          "end": 62.767999999999994,
+          "punctuation": "",
+          "duration": 0.4693333333333333
+        },
+        {
+          "type": "word",
+          "text": "17",
+          "start": 62.767999999999994,
+          "end": 62.92444444444444,
+          "punctuation": "",
+          "duration": 0.15644444444444444
+        },
+        {
+          "type": "word",
+          "text": "Pro",
+          "start": 62.92444444444444,
+          "end": 63.15911111111111,
+          "punctuation": "",
+          "duration": 0.23466666666666666
+        }
+      ],
+      "start": 61.90755555555555,
+      "end": 63.15911111111111,
+      "text": "of the iPhone 17 Pro",
+      "duration": 1.2515555555555622
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "is",
+          "start": 63.15911111111111,
+          "end": 63.315555555555555,
+          "punctuation": "",
+          "duration": 0.15644444444444444
+        },
+        {
+          "type": "word",
+          "text": "long",
+          "start": 63.315555555555555,
+          "end": 63.62844444444445,
+          "punctuation": "",
+          "duration": 0.3128888888888889
+        },
+        {
+          "type": "word",
+          "text": "term",
+          "start": 63.62844444444445,
+          "end": 63.94133333333334,
+          "punctuation": "",
+          "duration": 0.3128888888888889
+        },
+        {
+          "type": "word",
+          "text": "software",
+          "start": 63.94133333333334,
+          "end": 64.56711111111112,
+          "punctuation": "",
+          "duration": 0.6257777777777778
+        },
+        {
+          "type": "word",
+          "text": "updates",
+          "start": 64.56711111111112,
+          "end": 65.11466666666668,
+          "punctuation": ".",
+          "duration": 0.5475555555555556
+        }
+      ],
+      "start": 63.15911111111111,
+      "end": 65.11466666666668,
+      "text": "is long term software updates.",
+      "duration": 1.95555555555557
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Apple",
+          "start": 66.28799999999998,
+          "end": 66.674301369863,
+          "punctuation": "",
+          "duration": 0.38630136986301367
+        },
+        {
+          "type": "word",
+          "text": "provides",
+          "start": 66.674301369863,
+          "end": 67.29238356164383,
+          "punctuation": "",
+          "duration": 0.6180821917808218
+        },
+        {
+          "type": "word",
+          "text": "updates",
+          "start": 67.29238356164383,
+          "end": 67.83320547945205,
+          "punctuation": "",
+          "duration": 0.5408219178082191
+        },
+        {
+          "type": "word",
+          "text": "for",
+          "start": 67.83320547945205,
+          "end": 68.06498630136986,
+          "punctuation": "",
+          "duration": 0.2317808219178082
+        },
+        {
+          "type": "word",
+          "text": "many",
+          "start": 68.06498630136986,
+          "end": 68.37402739726026,
+          "punctuation": "",
+          "duration": 0.3090410958904109
+        }
+      ],
+      "start": 66.28799999999998,
+      "end": 68.37402739726026,
+      "text": "Apple provides updates for many",
+      "duration": 2.086027397260281
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "years",
+          "start": 68.37402739726026,
+          "end": 68.76032876712328,
+          "punctuation": ",",
+          "duration": 0.38630136986301367
+        }
+      ],
+      "start": 68.37402739726026,
+      "end": 68.76032876712328,
+      "text": "years,",
+      "duration": 0.3863013698630198
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "keeping",
+          "start": 68.76032876712328,
+          "end": 69.3011506849315,
+          "punctuation": "",
+          "duration": 0.5408219178082191
+        },
+        {
+          "type": "word",
+          "text": "the",
+          "start": 69.3011506849315,
+          "end": 69.53293150684931,
+          "punctuation": "",
+          "duration": 0.2317808219178082
+        },
+        {
+          "type": "word",
+          "text": "phone",
+          "start": 69.53293150684931,
+          "end": 69.91923287671233,
+          "punctuation": "",
+          "duration": 0.38630136986301367
+        },
+        {
+          "type": "word",
+          "text": "secure",
+          "start": 69.91923287671233,
+          "end": 70.38279452054795,
+          "punctuation": "",
+          "duration": 0.4635616438356164
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 70.38279452054795,
+          "end": 70.61457534246576,
+          "punctuation": "",
+          "duration": 0.2317808219178082
+        }
+      ],
+      "start": 68.76032876712328,
+      "end": 70.61457534246576,
+      "text": "keeping the phone secure and",
+      "duration": 1.8542465753424722
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "fast",
+          "start": 70.61457534246576,
+          "end": 70.92361643835616,
+          "punctuation": ".",
+          "duration": 0.3090410958904109
+        }
+      ],
+      "start": 70.61457534246576,
+      "end": 70.92361643835616,
+      "text": "fast.",
+      "duration": 0.3090410958904073
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "This",
+          "start": 71.92799999999998,
+          "end": 72.21265116279068,
+          "punctuation": "",
+          "duration": 0.2846511627906977
+        },
+        {
+          "type": "word",
+          "text": "phone",
+          "start": 72.21265116279068,
+          "end": 72.56846511627904,
+          "punctuation": "",
+          "duration": 0.3558139534883721
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 72.56846511627904,
+          "end": 72.7107906976744,
+          "punctuation": "",
+          "duration": 0.14232558139534884
+        },
+        {
+          "type": "word",
+          "text": "ideal",
+          "start": 72.7107906976744,
+          "end": 73.06660465116276,
+          "punctuation": "",
+          "duration": 0.3558139534883721
+        },
+        {
+          "type": "word",
+          "text": "for",
+          "start": 73.06660465116276,
+          "end": 73.28009302325579,
+          "punctuation": "",
+          "duration": 0.21348837209302327
+        }
+      ],
+      "start": 71.92799999999998,
+      "end": 73.28009302325579,
+      "text": "This phone is ideal for",
+      "duration": 1.3520930232558044
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "users",
+          "start": 73.28009302325579,
+          "end": 73.63590697674415,
+          "punctuation": "",
+          "duration": 0.3558139534883721
+        },
+        {
+          "type": "word",
+          "text": "who",
+          "start": 73.63590697674415,
+          "end": 73.84939534883718,
+          "punctuation": "",
+          "duration": 0.21348837209302327
+        },
+        {
+          "type": "word",
+          "text": "want",
+          "start": 73.84939534883718,
+          "end": 74.13404651162787,
+          "punctuation": "",
+          "duration": 0.2846511627906977
+        },
+        {
+          "type": "word",
+          "text": "a",
+          "start": 74.13404651162787,
+          "end": 74.20520930232554,
+          "punctuation": "",
+          "duration": 0.07116279069767442
+        },
+        {
+          "type": "word",
+          "text": "premium",
+          "start": 74.20520930232554,
+          "end": 74.70334883720926,
+          "punctuation": "",
+          "duration": 0.498139534883721
+        }
+      ],
+      "start": 73.28009302325579,
+      "end": 74.70334883720926,
+      "text": "users who want a premium",
+      "duration": 1.4232558139534746
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "device",
+          "start": 74.70334883720926,
+          "end": 75.13032558139531,
+          "punctuation": "",
+          "duration": 0.42697674418604653
+        },
+        {
+          "type": "word",
+          "text": "that",
+          "start": 75.13032558139531,
+          "end": 75.414976744186,
+          "punctuation": "",
+          "duration": 0.2846511627906977
+        },
+        {
+          "type": "word",
+          "text": "works",
+          "start": 75.414976744186,
+          "end": 75.77079069767437,
+          "punctuation": "",
+          "duration": 0.3558139534883721
+        },
+        {
+          "type": "word",
+          "text": "smoothly",
+          "start": 75.77079069767437,
+          "end": 76.34009302325576,
+          "punctuation": "",
+          "duration": 0.5693023255813954
+        },
+        {
+          "type": "word",
+          "text": "every",
+          "start": 76.34009302325576,
+          "end": 76.69590697674413,
+          "punctuation": "",
+          "duration": 0.3558139534883721
+        }
+      ],
+      "start": 74.70334883720926,
+      "end": 76.69590697674413,
+      "text": "device that works smoothly every",
+      "duration": 1.9925581395348644
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "day",
+          "start": 76.69590697674413,
+          "end": 76.90939534883715,
+          "punctuation": ".",
+          "duration": 0.21348837209302327
+        }
+      ],
+      "start": 76.69590697674413,
+      "end": 76.90939534883715,
+      "text": "day.",
+      "duration": 0.21348837209302474
+    }
+  ],
+  "totalDuration": 88.15,
   "images": {
     "img1": "https://media.gadgetbytenepal.com/2025/09/1757575348_0.jpg"
   },
-  "features": [
+  "specs": [
     {
       "label": "Display",
       "value": "6.3-inch Super Retina XDR"
@@ -1440,6 +3202,7 @@
   ],
   "metadata": {
     "wordCount": 176,
-    "generatedAt": "2025-12-16T14:43:41.258Z"
+    "estimatedDuration": 88.15,
+    "generatedAt": "2025-12-16T18:00:47.124Z"
   }
 }

@@ -9,57 +9,44 @@ import {
   Easing,
   spring,
   Sequence,
-  Loop,
-  Video,
 } from "remotion";
-import { useEffect, useState } from "react";
-
-export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { device: any }) => {
-  const [data, setData] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+export const TechVideo = ({ device: data }: { device: any }) => {
   const OUTRO_AUDIO = "device.mp3";
 
+  // 1. Process and normalize the data passed in the props
+  // Ensure words have a 'duration' property for safer calculation
+  const processedWords = (data.timeline || []).map((word: any) => ({
+    ...word,
+    duration: word.end - word.start,
+  }));
 
-  useEffect(() => {
-    try {
-      const timelineData = require(`../data/timelines/${device.timelineFile}`);
+  const finalData = {
+    ...data,
+    timeline: processedWords,
+    phrases: data.phrases || [],
+    // Use data.images/features/model directly, with sane fallbacks
+    images: data.images || { img1: 'default-image.jpg' },
+    features: data.features || data.specs || [],
+    model: data.model || 'Unknown Device',
+    audio: data.audio || null,
+  };
 
-      // Ensure words have a 'duration' property for safer calculation if it's missing from source
-      const processedWords = (timelineData.timeline || []).map((word: any) => ({
-        ...word,
-        duration: word.end - word.start,
-      }));
+  // 2. Check for critical missing data
+  if (!finalData || !finalData.timeline || finalData.timeline.length === 0) {
+    return (
+      <AbsoluteFill style={{ backgroundColor: "#0b0b0f", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ fontSize: 48, color: "white" }}>ERROR: Timeline data is missing. Check props file merge.</div>
+      </AbsoluteFill>
+    );
+  }
 
-      const processedData = {
-        ...timelineData,
-        timeline: processedWords,
-        phrases: timelineData.phrases || [],
-        images: timelineData.images || { img1: 'default-image.jpg' },
-        features: timelineData.features || timelineData.specs || [],
-        model: timelineData.model || 'Unknown Device',
-        audio: timelineData.audio || null,
-      };
-      setData(processedData);
-    } catch (error) {
-      console.error("Failed to load timeline data:", error);
-    } finally {
-      setLoading(false);
-    }
-  }, [device.timelineFile]);
 
   const TRANSITION_DURATION = 30;
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
 
-  if (loading || !data) {
-    return (
-      <AbsoluteFill style={{ backgroundColor: "#0b0b0f", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ fontSize: 48, color: "white" }}>Loading...</div>
-      </AbsoluteFill>
-    );
-  }
 
-  // --- Word Grouping Logic (Remains the same as before) ---
+  // --- Word Grouping Logic (Uses finalData) ---
   const groupSize = 5;
   const wordGroups: {
     words: any[];
@@ -69,7 +56,7 @@ export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { de
     id: string;
   }[] = [];
 
-  const sourcePhrases = data.phrases && data.phrases.length > 0 ? data.phrases : null;
+  const sourcePhrases = finalData.phrases && finalData.phrases.length > 0 ? finalData.phrases : null;
 
   if (sourcePhrases) {
     sourcePhrases.forEach((phrase: any, index: number) => {
@@ -85,8 +72,8 @@ export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { de
     });
   } else {
     let currentIndex = 0;
-    while (currentIndex < data.timeline.length) {
-      const groupWords = data.timeline.slice(currentIndex, currentIndex + groupSize);
+    while (currentIndex < finalData.timeline.length) {
+      const groupWords = finalData.timeline.slice(currentIndex, currentIndex + groupSize);
       if (groupWords.length === 0) break;
 
       const startTime = groupWords[0].start;
@@ -104,6 +91,8 @@ export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { de
       currentIndex += groupSize;
     }
   }
+  // --- End of Word Grouping Logic ---
+
 
   const lastGroupEndTime = wordGroups.length > 0 ? wordGroups[wordGroups.length - 1].endTime : 0;
   const mainContentEndFrame = Math.ceil(lastGroupEndTime * fps) + 30;
@@ -204,12 +193,6 @@ export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { de
     config: { damping: 8, mass: 0.7, stiffness: 100 },
   });
 
-  const imageScale = spring({
-    frame: finalScreenTime - 15,
-    fps,
-    config: { damping: 12, mass: 0.8, stiffness: 100 },
-  });
-
   const pulseValue = Math.sin(frame * 0.1) * 0.05 + 1;
 
   return (
@@ -272,10 +255,10 @@ export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { de
       />
 
       <Sequence from={0} durationInFrames={mainContentEndFrame}>
-        {data.audio && (
+        {finalData.audio && (
           // Audio synchronization fix: starts at frame 0 of the sequence
           <Audio
-            src={staticFile(data.audio.replace(/^\//, ''))}
+            src={staticFile(finalData.audio.replace(/^\//, ''))}
             volume={0.9}
             startFrom={0}
           />
@@ -296,7 +279,7 @@ export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { de
             zIndex: 2,
           }}
         >
-          {/* Device Image Section (Unchanged) */}
+          {/* Device Image Section */}
           <div
             style={{
               width: width > 1024 ? "45%" : "100%",
@@ -332,7 +315,7 @@ export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { de
               />
 
               <Img
-                src={data.images.img1}
+                src={finalData.images.img1}
                 style={{
                   width: "100%",
                   height: "auto",
@@ -394,7 +377,7 @@ export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { de
                   letterSpacing: "0.02em",
                 }}
               >
-                {data.model}
+                {finalData.model}
               </h3>
             </div>
           </div>
@@ -473,7 +456,7 @@ export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { de
               </div>
             )}
 
-            {/* Word Groups Display Container (Container remains the same) */}
+            {/* Word Groups Display Container */}
             <div
               style={{
                 position: "relative",
@@ -884,7 +867,7 @@ export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { de
                     lineHeight: 1.1,
                   }}
                 >
-                  {data.model}
+                  {finalData.model}
                 </h1>
 
                 <p
@@ -915,7 +898,7 @@ export const TechVideo = ({ device = { timelineFile: 'oneplus-15.json' } }: { de
                     marginBottom: 50,
                   }}
                 >
-                  {(data.features || data.specs || []).slice(0, 6).map((feature: any, index: number) => (
+                  {(finalData.features || finalData.specs || []).slice(0, 6).map((feature: any, index: number) => (
                     <div
                       key={index}
                       style={{
