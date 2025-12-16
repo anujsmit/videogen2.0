@@ -1,7 +1,6 @@
 import React from "react";
 import { Composition, staticFile } from "remotion";
 import { getAudioDurationInSeconds } from "@remotion/media-utils";
-
 import { TechVideo } from "./compositions/TechVideo";
 import { WordSequence } from "./components/WordSequence";
 import { Layout } from "./components/Layout";
@@ -33,24 +32,57 @@ export const Root: React.FC = () => {
           // 🔒 SAFETY: handle missing props
           const device = props?.device;
 
-          if (!device?.audio) {
+          if (!device?.timelineFile) {
             // Fallback duration (10s outro only)
             return {
               durationInFrames: OUTRO_SECONDS * FPS,
             };
           }
 
-          // Convert "/audio/file.mp3" → "audio/file.mp3"
-          const audioPath = device.audio.replace(/^\/+/, "");
+          // Try to get audio duration from timeline data
+          try {
+            // Import timeline data
+            const timelineData = require(`./data/timelines/${device.timelineFile}`);
+            if (timelineData?.timeline?.length > 0) {
+              const lastWord = timelineData.timeline[timelineData.timeline.length - 1];
+              const audioDuration = lastWord.end + 1; // Add 1 second buffer
+              
+              return {
+                durationInFrames: Math.ceil(
+                  (audioDuration + OUTRO_SECONDS) * FPS
+                ),
+              };
+            }
+          } catch (error) {
+            console.warn("Could not load timeline data:", error);
+          }
 
-          const audioDuration =
-            await getAudioDurationInSeconds(staticFile(audioPath));
+          // Fallback to audio file if available
+          if (device.audio) {
+            try {
+              // Convert "/audio/file.mp3" → "audio/file.mp3"
+              const audioPath = device.audio.replace(/^\/+/, "");
+              const audioDuration = await getAudioDurationInSeconds(staticFile(audioPath));
+              
+              return {
+                durationInFrames: Math.ceil(
+                  (audioDuration + OUTRO_SECONDS) * FPS
+                ),
+              };
+            } catch (audioError) {
+              console.warn("Could not get audio duration:", audioError);
+            }
+          }
 
+          // Ultimate fallback
           return {
-            durationInFrames: Math.ceil(
-              (audioDuration + OUTRO_SECONDS) * FPS
-            ),
+            durationInFrames: (30 + OUTRO_SECONDS) * FPS, // 30s main + 10s outro
           };
+        }}
+        defaultProps={{
+          device: {
+            timelineFile: 'samsung-galaxy-s25-ultra.json'
+          }
         }}
       />
 
@@ -82,21 +114,51 @@ export const Root: React.FC = () => {
         calculateMetadata={async ({ props }) => {
           const device = props?.device;
 
-          if (!device?.audio) {
+          if (!device?.timelineFile) {
             return {
               durationInFrames: OUTRO_SECONDS * FPS,
             };
           }
 
-          const audioPath = device.audio.replace(/^\/+/, "");
-          const audioDuration =
-            await getAudioDurationInSeconds(staticFile(audioPath));
+          try {
+            const timelineData = require(`./data/timelines/${device.timelineFile}`);
+            if (timelineData?.timeline?.length > 0) {
+              const lastWord = timelineData.timeline[timelineData.timeline.length - 1];
+              const audioDuration = lastWord.end + 1;
+              
+              return {
+                durationInFrames: Math.ceil(
+                  (audioDuration + OUTRO_SECONDS) * FPS
+                ),
+              };
+            }
+          } catch (error) {
+            console.warn("Could not load timeline data for portrait:", error);
+          }
+
+          if (device.audio) {
+            try {
+              const audioPath = device.audio.replace(/^\/+/, "");
+              const audioDuration = await getAudioDurationInSeconds(staticFile(audioPath));
+              
+              return {
+                durationInFrames: Math.ceil(
+                  (audioDuration + OUTRO_SECONDS) * FPS
+                ),
+              };
+            } catch (audioError) {
+              console.warn("Could not get audio duration for portrait:", audioError);
+            }
+          }
 
           return {
-            durationInFrames: Math.ceil(
-              (audioDuration + OUTRO_SECONDS) * FPS
-            ),
+            durationInFrames: (30 + OUTRO_SECONDS) * FPS,
           };
+        }}
+        defaultProps={{
+          device: {
+            timelineFile: 'samsung-galaxy-s25-ultra.json'
+          }
         }}
       />
     </>

@@ -1,432 +1,1512 @@
 {
   "model": "Vivo X300 Pro",
-  "overview": "The latest innovation from Vivo, pushing the boundaries of telephoto macro photography and sleek aesthetics.",
+  "overview": "A stylish flagship smartphone focused on zoom and macro photography.",
   "audio": "/audio/vivo-x300-pro.mp3",
   "timeline": [
     {
       "type": "word",
       "text": "The",
       "start": 0,
-      "end": 0.42,
+      "end": 0.45,
       "punctuation": ""
     },
     {
       "type": "word",
       "text": "Vivo",
-      "start": 0.42,
-      "end": 0.88,
+      "start": 0.45,
+      "end": 0.95,
       "punctuation": ""
     },
     {
       "type": "word",
       "text": "X300",
-      "start": 0.88,
-      "end": 1.34,
+      "start": 0.95,
+      "end": 1.55,
       "punctuation": ""
     },
     {
       "type": "word",
       "text": "Pro",
-      "start": 1.34,
-      "end": 1.76,
+      "start": 1.55,
+      "end": 2,
       "punctuation": ""
     },
     {
       "type": "word",
-      "text": "stands",
-      "start": 1.76,
-      "end": 2.26,
+      "text": "focuses",
+      "start": 2,
+      "end": 2.5,
       "punctuation": ""
     },
     {
       "type": "word",
-      "text": "out",
-      "start": 2.26,
-      "end": 2.68,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "with",
-      "start": 2.68,
-      "end": 3.14,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "its",
-      "start": 3.14,
-      "end": 3.56,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "advanced",
-      "start": 3.56,
-      "end": 4.06,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "telephoto",
-      "start": 4.06,
-      "end": 4.56,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "and",
-      "start": 4.56,
-      "end": 4.98,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "macro",
-      "start": 4.98,
-      "end": 5.48,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "photography",
-      "start": 5.48,
-      "end": 5.98,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "capabilities",
-      "start": 5.98,
-      "end": 6.48,
-      "punctuation": "."
-    },
-    {
-      "type": "word",
-      "text": "Its",
-      "start": 6.78,
-      "end": 7.2,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "AMOLED",
-      "start": 7.2,
-      "end": 7.7,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "display",
-      "start": 7.7,
-      "end": 8.2,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "offers",
-      "start": 8.2,
-      "end": 8.7,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "smooth",
-      "start": 8.7,
-      "end": 9.2,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "visuals",
-      "start": 9.2,
-      "end": 9.7,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "with",
-      "start": 9.7,
-      "end": 10.16,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "eye-care",
-      "start": 10.16,
-      "end": 10.66,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "technology",
-      "start": 10.66,
-      "end": 11.16,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "for",
-      "start": 11.16,
-      "end": 11.58,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "long",
-      "start": 11.58,
-      "end": 12.04,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "viewing",
-      "start": 12.04,
-      "end": 12.54,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "sessions",
-      "start": 12.54,
-      "end": 13.04,
-      "punctuation": "."
-    },
-    {
-      "type": "word",
-      "text": "The",
-      "start": 13.34,
-      "end": 13.76,
+      "text": "on",
+      "start": 2.5,
+      "end": 2.9,
       "punctuation": ""
     },
     {
       "type": "word",
       "text": "camera",
-      "start": 13.76,
-      "end": 14.26,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "system",
-      "start": 14.26,
-      "end": 14.76,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "excels",
-      "start": 14.76,
-      "end": 15.26,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "at",
-      "start": 15.26,
-      "end": 15.64,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "zoom",
-      "start": 15.64,
-      "end": 16.1,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "and",
-      "start": 16.1,
-      "end": 16.52,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "close-up",
-      "start": 16.52,
-      "end": 17.02,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "shots",
-      "start": 17.02,
-      "end": 17.52,
-      "punctuation": ","
-    },
-    {
-      "type": "word",
-      "text": "making",
-      "start": 17.52,
-      "end": 18.02,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "it",
-      "start": 18.02,
-      "end": 18.4,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "ideal",
-      "start": 18.4,
-      "end": 18.9,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "for",
-      "start": 18.9,
-      "end": 19.32,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "creative",
-      "start": 19.32,
-      "end": 19.82,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "photography",
-      "start": 19.82,
-      "end": 20.32,
-      "punctuation": "."
-    },
-    {
-      "type": "word",
-      "text": "With",
-      "start": 20.62,
-      "end": 21.08,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "a",
-      "start": 21.08,
-      "end": 21.42,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "long-lasting",
-      "start": 21.42,
-      "end": 21.92,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "battery",
-      "start": 21.92,
-      "end": 22.42,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "and",
-      "start": 22.42,
-      "end": 22.84,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "premium",
-      "start": 22.84,
-      "end": 23.34,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "design",
-      "start": 23.34,
-      "end": 23.84,
-      "punctuation": ","
-    },
-    {
-      "type": "word",
-      "text": "the",
-      "start": 23.84,
-      "end": 24.26,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "Vivo",
-      "start": 24.26,
-      "end": 24.72,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "X300",
-      "start": 24.72,
-      "end": 25.18,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "Pro",
-      "start": 25.18,
-      "end": 25.6,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "balances",
-      "start": 25.6,
-      "end": 26.1,
-      "punctuation": ""
-    },
-    {
-      "type": "word",
-      "text": "style",
-      "start": 26.1,
-      "end": 26.6,
-      "punctuation": ","
-    },
-    {
-      "type": "word",
-      "text": "camera",
-      "start": 26.6,
-      "end": 27.1,
+      "start": 2.9,
+      "end": 3.4,
       "punctuation": ""
     },
     {
       "type": "word",
       "text": "innovation",
-      "start": 27.1,
-      "end": 27.6,
-      "punctuation": ","
+      "start": 3.4,
+      "end": 3.9,
+      "punctuation": ""
     },
     {
       "type": "word",
       "text": "and",
-      "start": 27.6,
-      "end": 28.02,
+      "start": 3.9,
+      "end": 4.35,
       "punctuation": ""
     },
     {
       "type": "word",
-      "text": "everyday",
-      "start": 28.02,
-      "end": 28.52,
+      "text": "design",
+      "start": 4.35,
+      "end": 4.85,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "It",
+      "start": 5.15,
+      "end": 5.55,
       "punctuation": ""
     },
     {
       "type": "word",
-      "text": "performance",
-      "start": 28.52,
-      "end": 29.02,
+      "text": "features",
+      "start": 5.55,
+      "end": 6.05,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "a",
+      "start": 6.05,
+      "end": 6.4,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "smooth",
+      "start": 6.4,
+      "end": 6.9,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "AMOLED",
+      "start": 6.9,
+      "end": 7.4,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "display",
+      "start": 7.4,
+      "end": 7.9,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "that",
+      "start": 7.9,
+      "end": 8.4,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "is",
+      "start": 8.4,
+      "end": 8.8,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "comfortable",
+      "start": 8.8,
+      "end": 9.3,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "for",
+      "start": 9.3,
+      "end": 9.75,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "long",
+      "start": 9.75,
+      "end": 10.25,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "viewing",
+      "start": 10.25,
+      "end": 10.75,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "The",
+      "start": 11.05,
+      "end": 11.5,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "phone",
+      "start": 11.5,
+      "end": 12,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "feels",
+      "start": 12,
+      "end": 12.5,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "premium",
+      "start": 12.5,
+      "end": 13,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 13,
+      "end": 13.45,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "stylish",
+      "start": 13.45,
+      "end": 13.95,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "The",
+      "start": 14.25,
+      "end": 14.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "camera",
+      "start": 14.7,
+      "end": 15.2,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "system",
+      "start": 15.2,
+      "end": 15.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "is",
+      "start": 15.7,
+      "end": 16.1,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "very",
+      "start": 16.1,
+      "end": 16.6,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "powerful",
+      "start": 16.6,
+      "end": 17.1,
+      "punctuation": ","
+    },
+    {
+      "type": "word",
+      "text": "especially",
+      "start": 17.1,
+      "end": 17.6,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "for",
+      "start": 17.6,
+      "end": 18.05,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "zoom",
+      "start": 18.05,
+      "end": 18.55,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 18.55,
+      "end": 19,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "macro",
+      "start": 19,
+      "end": 19.5,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "photography",
+      "start": 19.5,
+      "end": 20,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "Close",
+      "start": 20.3,
+      "end": 20.8,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "up",
+      "start": 20.8,
+      "end": 21.2,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "shots",
+      "start": 21.2,
+      "end": 21.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "look",
+      "start": 21.7,
+      "end": 22.2,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "detailed",
+      "start": 22.2,
+      "end": 22.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 22.7,
+      "end": 23.15,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "sharp",
+      "start": 23.15,
+      "end": 23.65,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "Telephoto",
+      "start": 23.95,
+      "end": 24.45,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "photos",
+      "start": 24.45,
+      "end": 24.95,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "are",
+      "start": 24.95,
+      "end": 25.4,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "clear",
+      "start": 25.4,
+      "end": 25.9,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "even",
+      "start": 25.9,
+      "end": 26.4,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "from",
+      "start": 26.4,
+      "end": 26.9,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "far",
+      "start": 26.9,
+      "end": 27.35,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "away",
+      "start": 27.35,
+      "end": 27.85,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "Battery",
+      "start": 28.15,
+      "end": 28.65,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "life",
+      "start": 28.65,
+      "end": 29.15,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "is",
+      "start": 29.15,
+      "end": 29.55,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "strong",
+      "start": 29.55,
+      "end": 30.05,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 30.05,
+      "end": 30.5,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "lasts",
+      "start": 30.5,
+      "end": 31,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "a",
+      "start": 31,
+      "end": 31.35,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "full",
+      "start": 31.35,
+      "end": 31.85,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "day",
+      "start": 31.85,
+      "end": 32.3,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "with",
+      "start": 32.3,
+      "end": 32.8,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "normal",
+      "start": 32.8,
+      "end": 33.3,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "use",
+      "start": 33.3,
+      "end": 33.8,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "Charging",
+      "start": 34.1,
+      "end": 34.6,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "is",
+      "start": 34.6,
+      "end": 35,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "fast",
+      "start": 35,
+      "end": 35.5,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 35.5,
+      "end": 35.95,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "convenient",
+      "start": 35.95,
+      "end": 36.45,
+      "punctuation": "."
+    },
+    {
+      "type": "word",
+      "text": "The",
+      "start": 36.75,
+      "end": 37.2,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Vivo",
+      "start": 37.2,
+      "end": 37.7,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "X300",
+      "start": 37.7,
+      "end": 38.3,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "Pro",
+      "start": 38.3,
+      "end": 38.75,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "is",
+      "start": 38.75,
+      "end": 39.15,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "a",
+      "start": 39.15,
+      "end": 39.5,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "good",
+      "start": 39.5,
+      "end": 40,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "option",
+      "start": 40,
+      "end": 40.5,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "for",
+      "start": 40.5,
+      "end": 40.95,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "users",
+      "start": 40.95,
+      "end": 41.45,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "who",
+      "start": 41.45,
+      "end": 41.9,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "want",
+      "start": 41.9,
+      "end": 42.4,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "a",
+      "start": 42.4,
+      "end": 42.75,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "unique",
+      "start": 42.75,
+      "end": 43.25,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "phone",
+      "start": 43.25,
+      "end": 43.75,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "with",
+      "start": 43.75,
+      "end": 44.25,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "strong",
+      "start": 44.25,
+      "end": 44.75,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "camera",
+      "start": 44.75,
+      "end": 45.25,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "features",
+      "start": 45.25,
+      "end": 45.75,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "and",
+      "start": 45.75,
+      "end": 46.2,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "a",
+      "start": 46.2,
+      "end": 46.55,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "premium",
+      "start": 46.55,
+      "end": 47.05,
+      "punctuation": ""
+    },
+    {
+      "type": "word",
+      "text": "feel",
+      "start": 47.05,
+      "end": 47.55,
       "punctuation": "."
     }
   ],
-  "totalDuration": 29.02,
+  "phrases": [
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "The",
+          "start": 0,
+          "end": 0.45,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "Vivo",
+          "start": 0.45,
+          "end": 0.95,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "X300",
+          "start": 0.95,
+          "end": 1.55,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "Pro",
+          "start": 1.55,
+          "end": 2,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "focuses",
+          "start": 2,
+          "end": 2.5,
+          "punctuation": ""
+        }
+      ],
+      "start": 0,
+      "end": 2.5,
+      "text": "The Vivo X300 Pro focuses"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "on",
+          "start": 2.5,
+          "end": 2.9,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "camera",
+          "start": 2.9,
+          "end": 3.4,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "innovation",
+          "start": 3.4,
+          "end": 3.9,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 3.9,
+          "end": 4.35,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "design",
+          "start": 4.35,
+          "end": 4.85,
+          "punctuation": "."
+        }
+      ],
+      "start": 2.5,
+      "end": 4.85,
+      "text": "on camera innovation and design."
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "It",
+          "start": 5.15,
+          "end": 5.55,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "features",
+          "start": 5.55,
+          "end": 6.05,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "a",
+          "start": 6.05,
+          "end": 6.4,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "smooth",
+          "start": 6.4,
+          "end": 6.9,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "AMOLED",
+          "start": 6.9,
+          "end": 7.4,
+          "punctuation": ""
+        }
+      ],
+      "start": 5.15,
+      "end": 7.4,
+      "text": "It features a smooth AMOLED"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "display",
+          "start": 7.4,
+          "end": 7.9,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "that",
+          "start": 7.9,
+          "end": 8.4,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 8.4,
+          "end": 8.8,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "comfortable",
+          "start": 8.8,
+          "end": 9.3,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "for",
+          "start": 9.3,
+          "end": 9.75,
+          "punctuation": ""
+        }
+      ],
+      "start": 7.4,
+      "end": 9.75,
+      "text": "display that is comfortable for"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "long",
+          "start": 9.75,
+          "end": 10.25,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "viewing",
+          "start": 10.25,
+          "end": 10.75,
+          "punctuation": "."
+        }
+      ],
+      "start": 9.75,
+      "end": 10.75,
+      "text": "long viewing."
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "The",
+          "start": 11.05,
+          "end": 11.5,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "phone",
+          "start": 11.5,
+          "end": 12,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "feels",
+          "start": 12,
+          "end": 12.5,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "premium",
+          "start": 12.5,
+          "end": 13,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 13,
+          "end": 13.45,
+          "punctuation": ""
+        }
+      ],
+      "start": 11.05,
+      "end": 13.45,
+      "text": "The phone feels premium and"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "stylish",
+          "start": 13.45,
+          "end": 13.95,
+          "punctuation": "."
+        }
+      ],
+      "start": 13.45,
+      "end": 13.95,
+      "text": "stylish."
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "The",
+          "start": 14.25,
+          "end": 14.7,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "camera",
+          "start": 14.7,
+          "end": 15.2,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "system",
+          "start": 15.2,
+          "end": 15.7,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 15.7,
+          "end": 16.1,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "very",
+          "start": 16.1,
+          "end": 16.6,
+          "punctuation": ""
+        }
+      ],
+      "start": 14.25,
+      "end": 16.6,
+      "text": "The camera system is very"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "powerful",
+          "start": 16.6,
+          "end": 17.1,
+          "punctuation": ","
+        }
+      ],
+      "start": 16.6,
+      "end": 17.1,
+      "text": "powerful,"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "especially",
+          "start": 17.1,
+          "end": 17.6,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "for",
+          "start": 17.6,
+          "end": 18.05,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "zoom",
+          "start": 18.05,
+          "end": 18.55,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 18.55,
+          "end": 19,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "macro",
+          "start": 19,
+          "end": 19.5,
+          "punctuation": ""
+        }
+      ],
+      "start": 17.1,
+      "end": 19.5,
+      "text": "especially for zoom and macro"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "photography",
+          "start": 19.5,
+          "end": 20,
+          "punctuation": "."
+        }
+      ],
+      "start": 19.5,
+      "end": 20,
+      "text": "photography."
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Close",
+          "start": 20.3,
+          "end": 20.8,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "up",
+          "start": 20.8,
+          "end": 21.2,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "shots",
+          "start": 21.2,
+          "end": 21.7,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "look",
+          "start": 21.7,
+          "end": 22.2,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "detailed",
+          "start": 22.2,
+          "end": 22.7,
+          "punctuation": ""
+        }
+      ],
+      "start": 20.3,
+      "end": 22.7,
+      "text": "Close up shots look detailed"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "and",
+          "start": 22.7,
+          "end": 23.15,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "sharp",
+          "start": 23.15,
+          "end": 23.65,
+          "punctuation": "."
+        }
+      ],
+      "start": 22.7,
+      "end": 23.65,
+      "text": "and sharp."
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Telephoto",
+          "start": 23.95,
+          "end": 24.45,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "photos",
+          "start": 24.45,
+          "end": 24.95,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "are",
+          "start": 24.95,
+          "end": 25.4,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "clear",
+          "start": 25.4,
+          "end": 25.9,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "even",
+          "start": 25.9,
+          "end": 26.4,
+          "punctuation": ""
+        }
+      ],
+      "start": 23.95,
+      "end": 26.4,
+      "text": "Telephoto photos are clear even"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "from",
+          "start": 26.4,
+          "end": 26.9,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "far",
+          "start": 26.9,
+          "end": 27.35,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "away",
+          "start": 27.35,
+          "end": 27.85,
+          "punctuation": "."
+        }
+      ],
+      "start": 26.4,
+      "end": 27.85,
+      "text": "from far away."
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Battery",
+          "start": 28.15,
+          "end": 28.65,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "life",
+          "start": 28.65,
+          "end": 29.15,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 29.15,
+          "end": 29.55,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "strong",
+          "start": 29.55,
+          "end": 30.05,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 30.05,
+          "end": 30.5,
+          "punctuation": ""
+        }
+      ],
+      "start": 28.15,
+      "end": 30.5,
+      "text": "Battery life is strong and"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "lasts",
+          "start": 30.5,
+          "end": 31,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "a",
+          "start": 31,
+          "end": 31.35,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "full",
+          "start": 31.35,
+          "end": 31.85,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "day",
+          "start": 31.85,
+          "end": 32.3,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "with",
+          "start": 32.3,
+          "end": 32.8,
+          "punctuation": ""
+        }
+      ],
+      "start": 30.5,
+      "end": 32.8,
+      "text": "lasts a full day with"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "normal",
+          "start": 32.8,
+          "end": 33.3,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "use",
+          "start": 33.3,
+          "end": 33.8,
+          "punctuation": "."
+        }
+      ],
+      "start": 32.8,
+      "end": 33.8,
+      "text": "normal use."
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "Charging",
+          "start": 34.1,
+          "end": 34.6,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 34.6,
+          "end": 35,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "fast",
+          "start": 35,
+          "end": 35.5,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 35.5,
+          "end": 35.95,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "convenient",
+          "start": 35.95,
+          "end": 36.45,
+          "punctuation": "."
+        }
+      ],
+      "start": 34.1,
+      "end": 36.45,
+      "text": "Charging is fast and convenient."
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "The",
+          "start": 36.75,
+          "end": 37.2,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "Vivo",
+          "start": 37.2,
+          "end": 37.7,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "X300",
+          "start": 37.7,
+          "end": 38.3,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "Pro",
+          "start": 38.3,
+          "end": 38.75,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "is",
+          "start": 38.75,
+          "end": 39.15,
+          "punctuation": ""
+        }
+      ],
+      "start": 36.75,
+      "end": 39.15,
+      "text": "The Vivo X300 Pro is"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "a",
+          "start": 39.15,
+          "end": 39.5,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "good",
+          "start": 39.5,
+          "end": 40,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "option",
+          "start": 40,
+          "end": 40.5,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "for",
+          "start": 40.5,
+          "end": 40.95,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "users",
+          "start": 40.95,
+          "end": 41.45,
+          "punctuation": ""
+        }
+      ],
+      "start": 39.15,
+      "end": 41.45,
+      "text": "a good option for users"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "who",
+          "start": 41.45,
+          "end": 41.9,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "want",
+          "start": 41.9,
+          "end": 42.4,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "a",
+          "start": 42.4,
+          "end": 42.75,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "unique",
+          "start": 42.75,
+          "end": 43.25,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "phone",
+          "start": 43.25,
+          "end": 43.75,
+          "punctuation": ""
+        }
+      ],
+      "start": 41.45,
+      "end": 43.75,
+      "text": "who want a unique phone"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "with",
+          "start": 43.75,
+          "end": 44.25,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "strong",
+          "start": 44.25,
+          "end": 44.75,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "camera",
+          "start": 44.75,
+          "end": 45.25,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "features",
+          "start": 45.25,
+          "end": 45.75,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "and",
+          "start": 45.75,
+          "end": 46.2,
+          "punctuation": ""
+        }
+      ],
+      "start": 43.75,
+      "end": 46.2,
+      "text": "with strong camera features and"
+    },
+    {
+      "words": [
+        {
+          "type": "word",
+          "text": "a",
+          "start": 46.2,
+          "end": 46.55,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "premium",
+          "start": 46.55,
+          "end": 47.05,
+          "punctuation": ""
+        },
+        {
+          "type": "word",
+          "text": "feel",
+          "start": 47.05,
+          "end": 47.55,
+          "punctuation": "."
+        }
+      ],
+      "start": 46.2,
+      "end": 47.55,
+      "text": "a premium feel."
+    }
+  ],
+  "totalDuration": 47.55,
   "images": {
-    "img1": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/..."
+    "img1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNDgvXOXXl7-mU7j-oX7cmALF6b9ocF4v4ew&s"
   },
   "specs": [
     {
@@ -435,7 +1515,7 @@
     },
     {
       "label": "Camera",
-      "value": "200MP APO Telephoto"
+      "value": "200MP Telephoto Camera"
     },
     {
       "label": "Battery",
@@ -451,7 +1531,8 @@
     }
   ],
   "metadata": {
-    "wordCount": 60,
-    "generatedAt": "2025-12-16T04:43:55.389Z"
+    "wordCount": 95,
+    "estimatedDuration": 47.55,
+    "generatedAt": "2025-12-16T12:44:18.532Z"
   }
 }

@@ -1,14 +1,14 @@
 const fs = require("fs-extra");
 const path = require("path");
 const { devices } = require("../../data/device");
-
 const OUTPUT_DIR = path.join(process.cwd(), "src", "data", "timelines");
 fs.ensureDirSync(OUTPUT_DIR);
 
 // ✅ FIXED sentence parsing
 function textToTimeline(text) {
   const sentences =
-    text.match(/[^.!?]+[.!?]*/g)?.filter(Boolean) || [text];
+    text.match(/[^.!?]+[.!?]*/g)?.filter(Boolean) ||
+    [text];
 
   let timeline = [];
   let currentTime = 0;
@@ -38,7 +38,6 @@ function textToTimeline(text) {
     // pause after sentence
     currentTime += 0.3;
   });
-
   return timeline;
 }
 
@@ -58,7 +57,7 @@ devices.forEach(device => {
     timeline,
     totalDuration: timeline.at(-1)?.end || 0,
     images: device.images,
-    specs: device.specs,
+    features: device.specs, // FIXED: Changed 'specs' to 'features' to match usage in TechVideo.tsx
     metadata: {
       wordCount: timeline.length,
       generatedAt: new Date().toISOString()
@@ -68,5 +67,6 @@ devices.forEach(device => {
   const out = path.join(OUTPUT_DIR, `${slug}.json`);
   fs.writeJSONSync(out, json, { spaces: 2 });
 
-  console.log(`✅ Timeline generated: ${slug} (${timeline.length} words)`);
+  console.log(`✅ Timeline 
+  generated: ${slug} (${timeline.length} words)`);
 });

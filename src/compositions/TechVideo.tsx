@@ -11,7 +11,7 @@ import {
   Sequence,
 } from "remotion";
 import { CapCutCaption } from "../components/CapCutCaption";
-export const TechVideo = ({ device }: { device: any }) => {
+export const TechVideo = ({ device = { timelineFile: 'samsung-galaxy-s25-ultra.json' } }: { device: any }) => {
   const data = require(`../data/timelines/${device.timelineFile}`);
   const TRANSITION_DURATION = 30;
   const frame = useCurrentFrame();
@@ -366,6 +366,7 @@ export const TechVideo = ({ device }: { device: any }) => {
                       </h2>
 
                       <div style={{ marginBottom: 40 }}>
+                        // In the CapCutCaption usage:
                         <CapCutCaption
                           words={group.words}
                           fontSize={36}
@@ -374,6 +375,8 @@ export const TechVideo = ({ device }: { device: any }) => {
                           withBackground={false}
                           withUnderline={true}
                           fontFamily="'Inter', system-ui, sans-serif"
+                          typewriterEffect={true}  // Enable typewriter effect
+                          maxWordsInQueue={5}
                           style={{
                             justifyContent: "flex-start",
                             alignItems: "flex-start",
@@ -381,54 +384,6 @@ export const TechVideo = ({ device }: { device: any }) => {
                             position: "relative",
                           }}
                         />
-                      </div>
-
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          gap: 16,
-                        }}
-                      >
-                        {data.features?.slice(groupIndex * 2, groupIndex * 2 + 3).map((feature: string, index: number) => (
-                          <div
-                            key={index}
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: 12,
-                              padding: "14px 20px",
-                              backgroundColor: "rgba(255,255,255,0.02)",
-                              borderRadius: 12,
-                              border: "1px solid rgba(255,255,255,0.05)",
-                            }}
-                          >
-                            <div
-                              style={{
-                                width: 24,
-                                height: 24,
-                                borderRadius: "50%",
-                                backgroundColor: "rgba(108, 99, 255, 0.2)",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                              }}
-                            >
-                              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                <path d="M10 3L4.5 8.5L2 6" stroke="#6C63FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                              </svg>
-                            </div>
-                            <span
-                              style={{
-                                fontSize: 16,
-                                color: "#ffffff",
-                                fontWeight: 500,
-                              }}
-                            >
-                              {feature}
-                            </span>
-                          </div>
-                        ))}
                       </div>
                     </div>
                   );
@@ -723,7 +678,7 @@ export const TechVideo = ({ device }: { device: any }) => {
                     marginBottom: 40,
                   }}
                 >
-                  {data.features?.slice(0, 4).map((feature: string, index: number) => (
+                  {data.features?.slice(0, 4).map((feature: any, index: number) => (
                     <div
                       key={index}
                       style={{
@@ -761,7 +716,7 @@ export const TechVideo = ({ device }: { device: any }) => {
                           lineHeight: 1.4,
                         }}
                       >
-                        {feature}
+                        {`${feature.label}: ${feature.value}`}
                       </span>
                     </div>
                   ))}
