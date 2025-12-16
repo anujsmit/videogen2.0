@@ -1,7 +1,7 @@
 import { exec } from "child_process";
 import path from "path";
 import fs from "fs";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url"; // 💡 ADDED pathToFileURL
 
 // Resolve __dirname for ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -11,9 +11,10 @@ const __dirname = path.dirname(__filename);
 async function loadDevices() {
   try {
     const devicesPath = path.join(process.cwd(), "src", "data", "device.js");
-    
+    const deviceUrl = pathToFileURL(devicesPath).toString();
+
     // Use dynamic import for ES modules
-    const deviceModule = await import(devicesPath);
+    const deviceModule = await import(deviceUrl);
     return deviceModule.devices;
   } catch (error) {
     console.error("❌ Error loading devices:", error.message);
@@ -44,7 +45,7 @@ if (!fs.existsSync(OUT_DIR)) {
   fs.mkdirSync(OUT_DIR, { recursive: true });
 }
 
-/* Render videos one by one (important for stability) */
+/* Render videos concurrently */
 async function renderAll() {
   try {
     const devices = await loadDevices();
@@ -56,6 +57,9 @@ async function renderAll() {
     
     console.log(`📱 Found ${devices.length} device(s) to render`);
     
+    // 1. Array to hold all rendering promises
+    const renderPromises = [];
+
     for (const device of devices) {
       const slug = device.model
         .toLowerCase()
@@ -99,10 +103,11 @@ async function renderAll() {
         "--concurrency=2"
       ].join(" ");
 
-      console.log(`\n🎬 Rendering: ${device.model}`);
+      console.log(`\n🎬 Starting render for: ${device.model}`);
       console.log(`🎯 Output: ${outputFile}`);
 
-      await new Promise((resolve, reject) => {
+      // 2. Create the promise without 'await' in the loop
+      const renderPromise = new Promise((resolve, reject) => {
         const childProcess = exec(command, (error, stdout, stderr) => {
           if (error) {
             console.error(`❌ FAILED: ${device.model}`);
@@ -117,11 +122,18 @@ async function renderAll() {
         // Log output in real-time
         childProcess.stdout?.on('data', (data) => {
           if (data.includes('Frame') || data.includes('Rendering')) {
-            process.stdout.write(data);
+            // Optional: Add device model to log for clarity when running concurrently
+            process.stdout.write(`[${device.model}] ${data}`); 
           }
         });
       });
+      
+      // 3. Add the promise to the array
+      renderPromises.push(renderPromise);
     }
+
+    // 4. Wait for ALL rendering processes to finish simultaneously
+    await Promise.all(renderPromises);
 
     console.log("\n🎉 ALL VIDEOS RENDERED SUCCESSFULLY!");
   } catch (error) {
